@@ -257,92 +257,92 @@ if ($('#coin_sales7').length) {
 }
 
 /*--------------  coin_sales7 bar chart End ------------*/
-
-/*--------------  bar chart 08 amchart start ------------*/
-if ($('#ambarchart1').length) {
-    var chart = AmCharts.makeChart("ambarchart1", {
-        "theme": "light",
-        "type": "serial",
-        "balloon": {
-            "adjustBorderColor": false,
-            "horizontalPadding": 10,
-            "verticalPadding": 4,
-            "color": "#fff"
-        },
-        "dataProvider": [{
-            "country": "USA",
-            "year2004": 3.5,
-            "year2005": 4.2,
-            "color": "#bfbffd",
-            "color2": "#7474F0"
-        }, {
-            "country": "UK",
-            "year2004": 1.7,
-            "year2005": 3.1,
-            "color": "#bfbffd",
-            "color2": "#7474F0"
-        }, {
-            "country": "Canada",
-            "year2004": 2.8,
-            "year2005": 2.9,
-            "color": "#bfbffd",
-            "color2": "#7474F0"
-        }, {
-            "country": "Japan",
-            "year2004": 2.6,
-            "year2005": 2.3,
-            "color": "#bfbffd",
-            "color2": "#7474F0"
-        }, {
-            "country": "France",
-            "year2004": 1.4,
-            "year2005": 2.1,
-            "color": "#bfbffd",
-            "color2": "#7474F0"
-        }, {
-            "country": "Brazil",
-            "year2004": 2.6,
-            "year2005": 4.9,
-            "color": "#bfbffd",
-            "color2": "#7474F0"
-        }],
-        "valueAxes": [{
-            "unit": "%",
-            "position": "left",
-        }],
-        "startDuration": 1,
-        "graphs": [{
-            "balloonText": "GDP grow in [[category]] (2017): <b>[[value]]</b>",
-            "fillAlphas": 0.9,
-            "fillColorsField": "color",
-            "lineAlpha": 0.2,
-            "title": "2017",
-            "type": "column",
-            "valueField": "year2004"
-        }, {
-            "balloonText": "GDP grow in [[category]] (2018): <b>[[value]]</b>",
-            "fillAlphas": 0.9,
-            "fillColorsField": "color2",
-            "lineAlpha": 0.2,
-            "title": "2018",
-            "type": "column",
-            "clustered": false,
-            "columnWidth": 0.5,
-            "valueField": "year2005"
-        }],
-        "plotAreaFillAlphas": 0.1,
-        "categoryField": "country",
-        "categoryAxis": {
-            "gridPosition": "start"
-        },
-        "export": {
-            "enabled": false
-        }
-
-    });
-}
-
-/*--------------  bar chart 08 amchart END ------------*/
+//
+// /*--------------  bar chart 08 amchart start ------------*/
+// if ($('#ambarchart1').length) {
+//     var chart = AmCharts.makeChart("ambarchart1", {
+//         "theme": "light",
+//         "type": "serial",
+//         "balloon": {
+//             "adjustBorderColor": false,
+//             "horizontalPadding": 10,
+//             "verticalPadding": 4,
+//             "color": "#fff"
+//         },
+//         "dataProvider": [{
+//             "country": "USA",
+//             "year2004": 3.5,
+//             "year2005": 4.2,
+//             "color": "#bfbffd",
+//             "color2": "#7474F0"
+//         }, {
+//             "country": "UK",
+//             "year2004": 1.7,
+//             "year2005": 3.1,
+//             "color": "#bfbffd",
+//             "color2": "#7474F0"
+//         }, {
+//             "country": "Canada",
+//             "year2004": 2.8,
+//             "year2005": 2.9,
+//             "color": "#bfbffd",
+//             "color2": "#7474F0"
+//         }, {
+//             "country": "Japan",
+//             "year2004": 2.6,
+//             "year2005": 2.3,
+//             "color": "#bfbffd",
+//             "color2": "#7474F0"
+//         }, {
+//             "country": "France",
+//             "year2004": 1.4,
+//             "year2005": 2.1,
+//             "color": "#bfbffd",
+//             "color2": "#7474F0"
+//         }, {
+//             "country": "Brazil",
+//             "year2004": 2.6,
+//             "year2005": 4.9,
+//             "color": "#bfbffd",
+//             "color2": "#7474F0"
+//         }],
+//         "valueAxes": [{
+//             "unit": "%",
+//             "position": "left",
+//         }],
+//         "startDuration": 1,
+//         "graphs": [{
+//             "balloonText": "GDP grow in [[category]] (2017): <b>[[value]]</b>",
+//             "fillAlphas": 0.9,
+//             "fillColorsField": "color",
+//             "lineAlpha": 0.2,
+//             "title": "2017",
+//             "type": "column",
+//             "valueField": "year2004"
+//         }, {
+//             "balloonText": "GDP grow in [[category]] (2018): <b>[[value]]</b>",
+//             "fillAlphas": 0.9,
+//             "fillColorsField": "color2",
+//             "lineAlpha": 0.2,
+//             "title": "2018",
+//             "type": "column",
+//             "clustered": false,
+//             "columnWidth": 0.5,
+//             "valueField": "year2005"
+//         }],
+//         "plotAreaFillAlphas": 0.1,
+//         "categoryField": "country",
+//         "categoryAxis": {
+//             "gridPosition": "start"
+//         },
+//         "export": {
+//             "enabled": false
+//         }
+//
+//     });
+// }
+//
+// /*--------------  bar chart 08 amchart END ------------*/
 /*--------------  bar chart 09 amchart start ------------*/
 if ($('#ambarchart2').length) {
     var chart = AmCharts.makeChart("ambarchart2", {
@@ -531,55 +531,67 @@ if ($('#ambarchart4').length) {
         "type": "serial",
         "theme": "light",
         "marginRight": 70,
-        "dataProvider": [{
+        "dataProvider": [
+
+            {
             "country": "USA",
             "visits": 3025,
             "color": "#8918FE"
-        }, {
-            "country": "China",
-            "visits": 1882,
-            "color": "#7474F0"
-        }, {
-            "country": "Japan",
-            "visits": 1809,
-            "color": "#C5C5FD"
-        }, {
-            "country": "Germany",
-            "visits": 1322,
-            "color": "#952FFE"
-        }, {
-            "country": "UK",
-            "visits": 1122,
-            "color": "#7474F0"
-        }, {
-            "country": "France",
-            "visits": 1114,
-            "color": "#CBCBFD"
-        }, {
-            "country": "India",
-            "visits": 984,
-            "color": "#FD9C21"
-        }, {
-            "country": "Spain",
-            "visits": 711,
-            "color": "#0D8ECF"
-        }, {
-            "country": "Netherlands",
-            "visits": 665,
-            "color": "#0D52D1"
-        }, {
-            "country": "Russia",
-            "visits": 580,
-            "color": "#2A0CD0"
-        }, {
-            "country": "South Korea",
-            "visits": 443,
-            "color": "#8A0CCF"
-        }, {
-            "country": "Canada",
-            "visits": 441,
-            "color": "#9F43FE"
-        }],
+        },
+
+
+
+
+        //     {
+        //     "country": "China",
+        //     "visits": 1882,
+        //     "color": "#7474F0"
+        // }, {
+        //     "country": "Japan",
+        //     "visits": 1809,
+        //     "color": "#C5C5FD"
+        // }, {
+        //     "country": "Germany",
+        //     "visits": 1322,
+        //     "color": "#952FFE"
+        // }, {
+        //     "country": "UK",
+        //     "visits": 1122,
+        //     "color": "#7474F0"
+        // }, {
+        //     "country": "France",
+        //     "visits": 1114,
+        //     "color": "#CBCBFD"
+        // }, {
+        //     "country": "India",
+        //     "visits": 984,
+        //     "color": "#FD9C21"
+        // }, {
+        //     "country": "Spain",
+        //     "visits": 711,
+        //     "color": "#0D8ECF"
+        // }, {
+        //     "country": "Netherlands",
+        //     "visits": 665,
+        //     "color": "#0D52D1"
+        // }, {
+        //     "country": "Russia",
+        //     "visits": 580,
+        //     "color": "#2A0CD0"
+        // }, {
+        //     "country": "South Korea",
+        //     "visits": 443,
+        //     "color": "#8A0CCF"
+        // }, {
+        //     "country": "Canada",
+        //     "visits": 441,
+        //     "color": "#9F43FE"
+        // }
+
+
+        ]
+
+            ,
         "valueAxes": [{
             "axisAlpha": 0,
             "position": "left",
@@ -608,7 +620,10 @@ if ($('#ambarchart4').length) {
             "enabled": false
         }
 
-    });
+    }
+
+
+    );
 }
 /*--------------  bar chart 11 amchart END ------------*/
 /*--------------  bar chart 12 amchart start ------------*/

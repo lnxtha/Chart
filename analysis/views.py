@@ -16,13 +16,19 @@ class DashboardHome(View):
         context = {
         'dash_act': 'active',
         'growthtrend': Listings.objects.raw('select  1 as id, Datepart(year,r.date) as year, l.room_type as room_type, COUNT(distinct r.id) as counter from  analysis_listings l inner join analysis_reviews r ON r.id = l.id group by Datepart(year,r.date), l.room_type'),
-        'scatterboxplot': Listings.objects.raw('select distinct 1 as id,  availabilitiy_365 as availability, sum(cast(price as float)) as totalprice from analysis_listings group by availabilitiy_365 having sum(cast(price as float)) < 50000;')
+        'scatterboxplot': Listings.objects.raw('select distinct 1 as id,  availabilitiy_365 as availability, sum(cast(price as float)) as totalprice from analysis_listings group by availabilitiy_365 having sum(cast(price as float)) < 50000;'),
+            'barchart_ascending':
+                Listings.objects.raw(
+                    'select top 10  1 as id, neighbourhood, count(l.id) as total from analysis_listings l join analysis_reviews r on l.id = r.id group by neighbourhood order by count(l.id) asc'),
+            'barchart_descending':
+                Listings.objects.raw(
+                    'select top 10  1 as id, neighbourhood, count(l.id) as total from analysis_listings l join analysis_reviews r on l.id = r.id group by neighbourhood order by count(l.id) desc'),
+
+
+
         }
-
-        z = Listings.objects.all().values('state').annotate(total=Count('id')).order_by('id')
-        print(z)
-
         return render(request, template_name, context)
+
 
 
 
@@ -48,7 +54,12 @@ class BarChart(View):
     def get(self,request):
         template_name = 'barchart.html'
         variable_to_template = 'hello'
-        return render(request, template_name, {'context':variable_to_template, 'bar_chart':'active'} )
+        return render(request, template_name, {
+            'barchart_ascending':
+                Listings.objects.raw(
+                    'select top 10  1 as id, neighbourhood, count(l.id) as total from analysis_listings l join analysis_reviews r on l.id = r.id group by neighbourhood order by count(l.id) asc'),
+            'barchart_descending':
+         Listings.objects.raw('select top 10  1 as id, neighbourhood, count(l.id) as total from analysis_listings l join analysis_reviews r on l.id = r.id group by neighbourhood order by count(l.id) desc'), 'bar_chart':'active'} )
 
 
 class LineChart(View):

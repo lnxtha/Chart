@@ -88,69 +88,7 @@
             </div>
             <!-- page title area end -->
             <div class="main-content-inner">
-                <!-- sales report area start -->
-                <div class="sales-report-area mt-5 mb-5">
-                    <div class="row">
-{#                        <div class="col-md-4">#}
-{#                            <div class="single-report mb-xs-30">#}
-{#                                <div class="s-report-inner pr--20 pt--30 mb-3">#}
-{#                                    <div class="icon"><i class="fa fa-btc"></i></div>#}
-{#                                    <div class="s-report-title d-flex justify-content-between">#}
-{#                                        <h4 class="header-title mb-0">Bitcoin</h4>#}
-{#                                        <p>24 H</p>#}
-{#                                    </div>#}
-{#                                    <div class="d-flex justify-content-between pb-2 scatterplot">#}
-{#                                        <h2>$ 4567809,987</h2>#}
-{#                                        <span>- 45.87</span>#}
-{#                                    </div>#}
-{#                                </div>#}
-{#                                <canvas id="coin_sales1" height="100"></canvas>#}
-{#                            </div>#}
-{#                        </div>#}
-{#                        <div class="col-md-4">#}
-{#                            <div class="single-report mb-xs-30">#}
-{#                                <div class="s-report-inner pr--20 pt--30 mb-3">#}
-{#                                    <div class="icon"><i class="fa fa-btc"></i></div>#}
-{#                                    <div class="s-report-title d-flex justify-content-between">#}
-{#                                        <h4 class="header-title mb-0">Bitcoin Dash</h4>#}
-{#                                        <p>24 H</p>#}
-{#                                    </div>#}
-{#                                    <div class="d-flex justify-content-between pb-2">#}
-{#                                        <h2>$ 4567809,987</h2>#}
-{#                                        <span>- 45.87</span>#}
-{#                                    </div>#}
-{#                                </div>#}
-{#                                <canvas id="coin_sales2" height="100"></canvas>#}
-{#                            </div>#}
-{#                        </div>#}
-{#                        <div class="col-md-4">#}
-{#                            <div class="single-report">#}
-{#                                <div class="s-report-inner pr--20 pt--30 mb-3">#}
-{#                                    <div class="icon"><i class="fa fa-eur"></i></div>#}
-{#                                    <div class="s-report-title d-flex justify-content-between">#}
-{#                                        <h4 class="header-title mb-0">Euthorium</h4>#}
-{#                                        <p>24 H</p>#}
-{#                                    </div>#}
-{#                                    <div class="d-flex justify-content-between pb-2">#}
-{#                                        <h2>$ 4567809,987</h2>#}
-{#                                        <span>- 45.87</span>#}
-{#                                    </div>#}
-{#                                </div>#}
-{#                                <canvas id="coin_sales3" height="100"></canvas>#}
-{#                            </div>#}
-{#                        </div>#}
-                        <h3>35 Fastest times up Alpe d'Huez and doping</h3>
-                        <div class="col-md-8">
-                          <canvas id="outputCanvas" width="500" height="300"></canvas>
-                        </div>
 
-                        <div class="col-md-4">
-                            smthng else
-                        </div>
-                    </div>
-                </div>
-                <!-- sales report area end -->
-                <!-- overview area start -->
                 <div class="row">
                     <div class="col-xl-9 col-lg-8">
                         <div class="card">
@@ -178,6 +116,35 @@
                         </div>
                     </div>
                 </div>
+
+
+
+                <!-- sales report area start -->
+                <div class="sales-report-area mt-5 mb-5">
+                    <div class="row">
+                        <canvas id="outputCanvas" width="500" height="300"></canvas>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-6 mt-5">
+                    <div class="card">
+                        <div class="card-body">
+                            <div id="barchart1"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-5">
+                    <div class="card">
+                        <div class="card-body">
+                            <div id="barchart2"></div>
+                        </div>
+                    </div>
+                </div>
+
+            <!-- sales report area end -->
+                <!-- overview area start -->
+
                 <!-- overview area end -->
                 <!-- market value area start -->
                 <div class="row mt-5 mb-5">
@@ -714,6 +681,113 @@ var ctx = document.getElementById("outputCanvas").getContext('2d');
   .catch(function (error) {
   console.log(error);
 });
+
+
+    {# Bar chart #}
+
+
+ /*--------------  bar chart in ascending start ------------*/
+if ($('#barchart1').length) {
+    var chart = AmCharts.makeChart("barchart1", {
+        "type": "serial",
+        "theme": "light",
+        "marginRight": 70,
+        "dataProvider": [
+            {% for row in barchart_ascending %}
+            {
+            "country": "{{ row.neighbourhood }}",
+            "visits": {{ row.total }},
+            "color": "#8918FE"
+        },
+            {% endfor %}
+
+        ],
+        "valueAxes": [{
+            "axisAlpha": 0,
+            "position": "left",
+            "title": false
+        }],
+        "startDuration": 1,
+        "graphs": [{
+            "balloonText": "<b>[[category]]: [[value]]</b>",
+            "fillColorsField": "color",
+            "fillAlphas": 0.9,
+            "lineAlpha": 0.2,
+            "type": "column",
+            "valueField": "visits"
+        }],
+        "chartCursor": {
+            "categoryBalloonEnabled": false,
+            "cursorAlpha": 0,
+            "zoomable": false
+        },
+        "categoryField": "country",
+        "categoryAxis": {
+            "gridPosition": "start",
+            "labelRotation": 45
+        },
+        "export": {
+            "enabled": false
+        }
+
+    }
+
+
+    );
+}
+/*--------------  bar chart in ascending END ------------*/
+
+
+ /*--------------  bar chart in descending start ------------*/
+if ($('#barchart2').length) {
+    var chart = AmCharts.makeChart("barchart2", {
+        "type": "serial",
+        "theme": "light",
+        "marginRight": 70,
+        "dataProvider": [
+            {% for row in barchart_descending %}
+            {
+            "country": "{{ row.neighbourhood }}",
+            "visits": {{ row.total }},
+            "color": "#8918FE"
+        },
+            {% endfor %}
+
+        ],
+        "valueAxes": [{
+            "axisAlpha": 0,
+            "position": "left",
+            "title": false
+        }],
+        "startDuration": 1,
+        "graphs": [{
+            "balloonText": "<b>[[category]]: [[value]]</b>",
+            "fillColorsField": "color",
+            "fillAlphas": 0.9,
+            "lineAlpha": 0.2,
+            "type": "column",
+            "valueField": "visits"
+        }],
+        "chartCursor": {
+            "categoryBalloonEnabled": false,
+            "cursorAlpha": 0,
+            "zoomable": false
+        },
+        "categoryField": "country",
+        "categoryAxis": {
+            "gridPosition": "start",
+            "labelRotation": 45
+        },
+        "export": {
+            "enabled": false
+        }
+
+    }
+
+
+    );
+}
+/*--------------  bar chart in descending end ------------*/
 
 
 </script>

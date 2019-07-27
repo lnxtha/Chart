@@ -211,8 +211,6 @@
 
     <script>
 
-
-
     /*--------------  bar chart 11 amchart start ------------*/
 if ($('#ambarchart4').length) {
     var chart = AmCharts.makeChart("ambarchart4", {
@@ -220,14 +218,13 @@ if ($('#ambarchart4').length) {
         "theme": "light",
         "marginRight": 70,
         "dataProvider": [
-            {% for row in barchart %}
+            {% for row in barchart_descending %}
             {
             "country": "{{ row.neighbourhood }}",
             "visits": {{ row.total }},
             "color": "#8918FE"
         },
             {% endfor %}
-
         ],
         "valueAxes": [{
             "axisAlpha": 0,
@@ -256,11 +253,7 @@ if ($('#ambarchart4').length) {
         "export": {
             "enabled": false
         }
-
-    }
-
-
-    );
+    });
 }
 /*--------------  bar chart 11 amchart END ------------*/
 

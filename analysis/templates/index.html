@@ -126,26 +126,29 @@
                     </div>
                 </div>
 
+                <div class="row">
 
-                <div class="col-lg-6 mt-5">
-                    <div class="card">
-                        <div class="card-body">
-                            <div id="barchart1"></div>
+                    <div class="col-md-6 mt-5">
+                        <div class="card">
+                            <h3>Booking bar chart (Order by Ascending)</h3>
+                            <div class="card-body">
+                                <div id="ambarchart4"></div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-6 mt-5">
-                    <div class="card">
-                        <div class="card-body">
-                            <div id="barchart2"></div>
+
+
+                    <div class="col-md-6 mt-5">
+                        <div class="card">
+                            <h3>Booking bar chart (Order by Descending)</h3>
+                            <div class="card-body">
+                                <div id="ambarchart5"></div>
+                            </div>
                         </div>
                     </div>
+
+
                 </div>
-
-            <!-- sales report area end -->
-                <!-- overview area start -->
-
-                <!-- overview area end -->
                 <!-- market value area start -->
                 <div class="row mt-5 mb-5">
                     <div class="col-12">
@@ -495,11 +498,52 @@
     <script src="{% static 'assets/js/line-chart.js' %}"></script>
     <!-- all pie chart -->
     <script src="{% static 'assets/js/pie-chart.js' %}"></script>
+
+    <!-- all bar chart activation -->
+    <script src="{% static 'assets/js/bar-chart.js' %}"></script>
     <!-- others plugins -->
     <script src="{% static 'assets/js/plugins.js' %}"></script>
     <script src="{% static 'assets/js/scripts.js' %}"></script>
+        <!-- start amchart js -->
+    <script src="{% static 'assets/js/amcharts.js' %}"></script>
 
     <script src="{% static 'cht.js' %}"></script>
+
+
+
+
+     <script src="{% static 'assets/js/vendor/jquery-2.2.4.min.js' %}"></script>
+    <!-- bootstrap 4 js -->
+    <script src="{% static 'assets/js/popper.min.js' %}"></script>
+    <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'assets/js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'assets/js/metisMenu.min.js' %}"></script>
+    <script src="{% static 'assets/js/jquery.slimscroll.min.js' %}"></script>
+    <script src="{% static 'assets/js/jquery.slicknav.min.js' %}"></script>
+      <!-- start chart js -->
+    <script src="{% static 'assets/js/charts.min.js' %}"></script>
+    <!-- start highcharts js -->
+    <script src="{% static 'assets/js/highcharts.js' %}"></script>
+    <!-- start zingchart js -->
+    <script src="{% static '/assets/js/zingchart.min.js' %}"></script>
+    <script>
+    zingchart.MODULESDIR = "https://cdn.zingchart.com/modules/";
+    ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9", "ee6b7db5b51705a13dc2339db3edaf6d"];
+    </script>
+    <!-- start amchart js -->
+    <script src="{% static 'assets/js/amcharts.js' %}"></script>
+    <script src="{% static 'assets/js/serial.js' %}"></script>
+    <script src="{% static 'assets/js/export.min.js' %}"></script>
+    <script src="{% static 'assets/js/light.js' %}"></script>
+    <!-- all line chart activation -->
+    <script src="{% static 'assets/js/line-chart.js' %}"></script>
+    <!-- all bar chart activation -->
+    <script src="{% static 'assets/js/bar-chart.js' %}"></script>
+    <!-- all pie chart -->
+    <script src="{% static 'assets/js/pie-chart.js' %}"></script>
+    <!-- others plugins -->
+    <script src="{% static 'assets/js/plugins.js' %}"></script>
+    <script src="{% static 'assets/js/scripts.js' %}"></script>
 
 
 {% autoescape off %}
@@ -678,17 +722,17 @@ var ctx = document.getElementById("outputCanvas").getContext('2d');
       }
     }
   })
-  .catch(function (error) {
-  console.log(error);
-});
+
+</script>
+{% endautoescape %}
 
 
-    {# Bar chart #}
 
+<script>
 
- /*--------------  bar chart in ascending start ------------*/
-if ($('#barchart1').length) {
-    var chart = AmCharts.makeChart("barchart1", {
+    /*--------------  bar chart 11 amchart start ------------*/
+if ($('#ambarchart4').length) {
+    var chart = AmCharts.makeChart("ambarchart4", {
         "type": "serial",
         "theme": "light",
         "marginRight": 70,
@@ -700,7 +744,6 @@ if ($('#barchart1').length) {
             "color": "#8918FE"
         },
             {% endfor %}
-
         ],
         "valueAxes": [{
             "axisAlpha": 0,
@@ -729,18 +772,14 @@ if ($('#barchart1').length) {
         "export": {
             "enabled": false
         }
-
-    }
-
-
-    );
+    });
 }
-/*--------------  bar chart in ascending END ------------*/
+/*--------------  bar chart 11 amchart END ------------*/
 
 
- /*--------------  bar chart in descending start ------------*/
-if ($('#barchart2').length) {
-    var chart = AmCharts.makeChart("barchart2", {
+ /*--------------  bar chart 12 amchart start ------------*/
+if ($('#ambarchart4').length) {
+    var chart = AmCharts.makeChart("ambarchart5", {
         "type": "serial",
         "theme": "light",
         "marginRight": 70,
@@ -752,7 +791,6 @@ if ($('#barchart2').length) {
             "color": "#8918FE"
         },
             {% endfor %}
-
         ],
         "valueAxes": [{
             "axisAlpha": 0,
@@ -781,16 +819,11 @@ if ($('#barchart2').length) {
         "export": {
             "enabled": false
         }
-
-    }
-
-
-    );
+    });
 }
-/*--------------  bar chart in descending end ------------*/
+/*--------------  bar chart 12 amchart END ------------*/
 
+    </script>
 
-</script>
-{% endautoescape %}
 
 {% endblock %}

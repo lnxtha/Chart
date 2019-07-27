@@ -1520,7 +1520,9 @@
                 };
                 x || y.attr(k).css(b({
                     cursor: "default"
-                }, m));
+                }, m));highpiechart4
+
+
                 return y.on("click", function(a) {
                     3 !== n && r.call(y, a)
                 })

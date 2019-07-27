@@ -235,64 +235,64 @@ if ($('#ampiechart3').length) {
 
 /*-------------- 3 Pie chart amchart end ------------*/
 
-/*-------------- 4 Pie chart highcharts start ------------*/
-if ($('#highpiechart4').length) {
-    var pieColors = (function() {
-        var colors = [],
-            base = Highcharts.getOptions().colors[0],
-            i;
-
-        for (i = 0; i < 10; i += 1) {
-            // Start out with a darkened base color (negative brighten), and end
-            // up with a much brighter color
-            colors.push(Highcharts.Color(base).brighten((i - 3) / 7).get());
-        }
-        return colors;
-    }());
-
-    // Build the chart
-    Highcharts.chart('highpiechart4', {
-        chart: {
-            plotBackgroundColor: null,
-            plotBorderWidth: null,
-            plotShadow: false,
-            type: 'pie'
-        },
-        title: {
-            text: 'Dollar market Values, 2018'
-        },
-        tooltip: {
-            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
-        },
-        plotOptions: {
-            pie: {
-                allowPointSelect: true,
-                cursor: 'pointer',
-                colors: pieColors,
-                dataLabels: {
-                    style: { "color": "contrast", "fontSize": "11px", "fontWeight": "bold", "textOutline": "" },
-                    enabled: true,
-                    format: '<b>{point.name}</b><br>{point.percentage:.1f} %',
-                    distance: -50,
-                    filter: {
-                        property: 'percentage',
-                        operator: '>',
-                        value: 4
-                    }
-                }
-            }
-        },
-        series: [{
-            name: 'Share',
-            data: [
-                { name: 'USD', y: 61.41 },
-                { name: 'BTC', y: 11.84 },
-                { name: 'TCN', y: 10.85 }
-            ]
-        }]
-    });
-}
-/*-------------- 4 Pie chart highcharts end ------------*/
+// /*-------------- 4 Pie chart highcharts start ------------*/
+// if ($('#highpiechart4').length) {
+//     var pieColors = (function() {
+//         var colors = [],
+//             base = Highcharts.getOptions().colors[0],
+//             i;
+//
+//         for (i = 0; i < 10; i += 1) {
+//             // Start out with a darkened base color (negative brighten), and end
+//             // up with a much brighter color
+//             colors.push(Highcharts.Color(base).brighten((i - 3) / 7).get());
+//         }
+//         return colors;
+//     }());
+//
+//     // Build the chart
+//     Highcharts.chart('highpiechart4', {
+//         chart: {
+//             plotBackgroundColor: null,
+//             plotBorderWidth: null,
+//             plotShadow: false,
+//             type: 'pie'
+//         },
+//         title: {
+//             text: 'Dollar market Values, 2018'
+//         },
+//         tooltip: {
+//             pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+//         },
+//         plotOptions: {
+//             pie: {
+//                 allowPointSelect: true,
+//                 cursor: 'pointer',
+//                 colors: pieColors,
+//                 dataLabels: {
+//                     style: { "color": "contrast", "fontSize": "11px", "fontWeight": "bold", "textOutline": "" },
+//                     enabled: true,
+//                     format: '<b>{point.name}</b><br>{point.percentage:.1f} %',
+//                     distance: -50,
+//                     filter: {
+//                         property: 'percentage',
+//                         operator: '>',
+//                         value: 4
+//                     }
+//                 }
+//             }
+//         },
+//         series: [{
+//             name: 'Share',
+//             data: [
+//                 { name: 'USD', y: 61.41 },
+//                 { name: 'BTC', y: 11.84 },
+//                 { name: 'TCN', y: 10.85 }
+//             ]
+//         }]
+//     });
+// }
+// /*-------------- 4 Pie chart highcharts end ------------*/
 
 /*-------------- 5 Pie chart highcharts start ------------*/
 if ($('#highpiechart5').length) {

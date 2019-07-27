@@ -21,7 +21,7 @@ class DashboardHome(View):
          Listings.objects.raw('select top 10  1 as id, neighbourhood, count(l.id) as total from analysis_listings l join analysis_reviews r on l.id = r.id group by neighbourhood order by count(l.id) asc'),
             'barchart_descending':
          Listings.objects.raw('select top 10  1 as id, neighbourhood, count(l.id) as total from analysis_listings l join analysis_reviews r on l.id = r.id group by neighbourhood order by count(l.id) desc'),
-
+        'piechart': Listings.objects.raw('select 1 as id, l.room_type roomtype, (Count(c.id)* 100 / (Select Count(*) From analysis_calendars)) as percentg from analysis_listings l join analysis_calendars c on l.id =  c.id group by room_type')
 
 
         }

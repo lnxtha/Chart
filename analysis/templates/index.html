@@ -90,7 +90,7 @@
             <div class="main-content-inner">
 
                 <div class="row">
-                    <div class="col-xl-9 col-lg-8">
+                    <div class="col-xl-9 col-lg-6">
                         <div class="card">
                             <div class="card-body">
                                 <div class="d-flex justify-content-between align-items-center">
@@ -107,11 +107,11 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-3 col-lg-4 coin-distribution">
+                    <div class="col-xl-3 col-lg-6 coin-distribution">
                         <div class="card h-full">
                             <div class="card-body">
-                                <h4 class="header-title mb-0">Coin Distribution</h4>
-                                <div id="coin_distribution"></div>
+                                <h4 class="header-title mb-0">Coin Distribuasdfasdfasdftion</h4>
+                                <div id="highpiechart4"></div>
                             </div>
                         </div>
                     </div>
@@ -822,6 +822,74 @@ if ($('#ambarchart4').length) {
     });
 }
 /*--------------  bar chart 12 amchart END ------------*/
+
+
+
+
+
+/*-------------- 4 Pie chart highcharts start ------------*/
+if ($('#highpiechart4').length) {
+    var pieColors = (function() {
+        var colors = [],
+            base = Highcharts.getOptions().colors[0],
+            i;
+
+        for (i = 0; i < 10; i += 1) {
+            // Start out with a darkened base color (negative brighten), and end
+            // up with a much brighter color
+            colors.push(Highcharts.Color(base).brighten((i - 3) / 7).get());
+        }
+        return colors;
+    }());
+
+    // Build the chart
+    Highcharts.chart('highpiechart4', {
+        chart: {
+            plotBackgroundColor: null,
+            plotBorderWidth: null,
+            plotShadow: false,
+            type: 'pie'
+        },
+        title: {
+            text: 'Dollar market Values, 2018'
+        },
+        tooltip: {
+            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+        },
+        plotOptions: {
+            pie: {
+                allowPointSelect: true,
+                cursor: 'pointer',
+                colors: pieColors,
+                dataLabels: {
+                    style: { "color": "contrast", "fontSize": "11px", "fontWeight": "bold", "textOutline": "",
+                    "margin":"10px"},
+                    enabled: true,
+                    format: '<b>{point.name}</b><br>{point.percentage:.1f} %',
+                    distance: -40,
+                    filter: {
+                        property: 'percentage',
+                        operator: '>',
+                        value: 4
+                    }
+                }
+            }
+        },
+        series: [{
+            name: 'Share',
+            data: [
+                {#{ name: 'USD', y: 61.41 },#}
+                {#{ name: 'BTC', y: 11.84 },#}
+                {#{ name: 'TCN', y: 10.85 },#}
+                 {% for row in piechart %}
+                    { name: '{{ row.roomtype }}', y: {{ row.percentg }} },
+                {% endfor %}
+
+            ]
+        }]
+    });
+}
+/*-------------- 4 Pie chart highcharts end ------------*/
 
     </script>
 

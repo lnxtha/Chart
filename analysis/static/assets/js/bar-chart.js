@@ -361,40 +361,40 @@ if ($('#ambarchart2').length) {
             "color": "#ffffff"
         },
 
-        "dataProvider": [{
-            "year": 2013,
-            "income": 23.5,
-            "expenses": 21.1,
-            "color": "#7474f0"
-        }, {
-            "year": 2014,
-            "income": 26.2,
-            "expenses": 30.5,
-            "color": "#7474f0"
-        }, {
-            "year": 2015,
-            "income": 30.1,
-            "expenses": 34.9,
-            "color": "#7474f0"
-        }, {
-            "year": 2016,
-            "income": 29.5,
-            "expenses": 31.1,
-            "color": "#7474f0"
-        }, {
-            "year": 2017,
-            "income": 30.6,
-            "expenses": 28.2,
-            "dashLengthLine": 5,
-            "color": "#7474f0"
-        }, {
-            "year": 2018,
-            "income": 34.1,
-            "expenses": 32.9,
-            "dashLengthColumn": 5,
-            "alpha": 0.2,
-            "additional": "(projection)"
-        }],
+        // "dataProvider": [{
+        //     "year": 2013,
+        //     "income": 23.5,
+        //     "expenses": 21.1,
+        //     "color": "#7474f0"
+        // }, {
+        //     "year": 2014,
+        //     "income": 26.2,
+        //     "expenses": 30.5,
+        //     "color": "#7474f0"
+        // }, {
+        //     "year": 2015,
+        //     "income": 30.1,
+        //     "expenses": 34.9,
+        //     "color": "#7474f0"
+        // }, {
+        //     "year": 2016,
+        //     "income": 29.5,
+        //     "expenses": 31.1,
+        //     "color": "#7474f0"
+        // }, {
+        //     "year": 2017,
+        //     "income": 30.6,
+        //     "expenses": 28.2,
+        //     "dashLengthLine": 5,
+        //     "color": "#7474f0"
+        // }, {
+        //     "year": 2018,
+        //     "income": 34.1,
+        //     "expenses": 32.9,
+        //     "dashLengthColumn": 5,
+        //     "alpha": 0.2,
+        //     "additional": "(projection)"
+        // }],
         "valueAxes": [{
             "axisAlpha": 0,
             "position": "left"
@@ -438,93 +438,93 @@ if ($('#ambarchart2').length) {
     });
 }
 
-/*--------------  bar chart 09 amchart END ------------*/
-/*--------------  bar chart 10 amchart start ------------*/
-if ($('#ambarchart3').length) {
-    var chart = AmCharts.makeChart("ambarchart3", {
-        "type": "serial",
-        "theme": "light",
-        "categoryField": "year",
-        "rotate": true,
-        "startDuration": 1,
-        "categoryAxis": {
-            "gridPosition": "start",
-            "position": "left"
-        },
-        "trendLines": [],
-        "graphs": [{
-                "balloonText": "Income:[[value]]",
-                "fillAlphas": 0.8,
-                "id": "AmGraph-1",
-                "lineAlpha": 0.2,
-                "title": "Income",
-                "type": "column",
-                "valueField": "income",
-                "fillColorsField": "color"
-            },
-            {
-                "balloonText": "Expenses:[[value]]",
-                "fillAlphas": 0.8,
-                "id": "AmGraph-2",
-                "lineAlpha": 0.2,
-                "title": "Expenses",
-                "type": "column",
-                "valueField": "expenses",
-                "fillColorsField": "color2"
-            }
-        ],
-        "guides": [],
-        "valueAxes": [{
-            "id": "ValueAxis-1",
-            "position": "top",
-            "axisAlpha": 0
-        }],
-        "allLabels": [],
-        "balloon": {},
-        "titles": [],
-        "dataProvider": [{
-                "year": 2014,
-                "income": 23.5,
-                "expenses": 18.1,
-                "color": "#7474f0",
-                "color2": "#C5C5FD"
-            },
-            {
-                "year": 2015,
-                "income": 26.2,
-                "expenses": 22.8,
-                "color": "#7474f0",
-                "color2": "#C5C5FD"
-            },
-            {
-                "year": 2016,
-                "income": 30.1,
-                "expenses": 23.9,
-                "color": "#7474f0",
-                "color2": "#C5C5FD"
-            },
-            {
-                "year": 2017,
-                "income": 29.5,
-                "expenses": 25.1,
-                "color": "#7474f0",
-                "color2": "#C5C5FD"
-            },
-            {
-                "year": 2018,
-                "income": 24.6,
-                "expenses": 25,
-                "color": "#7474f0",
-                "color2": "#C5C5FD"
-            }
-        ],
-        "export": {
-            "enabled": false
-        }
-
-    });
-}
-/*--------------  bar chart 10 amchart END ------------*/
+// /*--------------  bar chart 09 amchart END ------------*/
+// /*--------------  bar chart 10 amchart start ------------*/
+// if ($('#ambarchart3').length) {
+//     var chart = AmCharts.makeChart("ambarchart3", {
+//         "type": "serial",
+//         "theme": "light",
+//         "categoryField": "year",
+//         "rotate": true,
+//         "startDuration": 1,
+//         "categoryAxis": {
+//             "gridPosition": "start",
+//             "position": "left"
+//         },
+//         "trendLines": [],
+//         "graphs": [{
+//                 "balloonText": "Income:[[value]]",
+//                 "fillAlphas": 0.8,
+//                 "id": "AmGraph-1",
+//                 "lineAlpha": 0.2,
+//                 "title": "Income",
+//                 "type": "column",
+//                 "valueField": "income",
+//                 "fillColorsField": "color"
+//             },
+//             {
+//                 "balloonText": "Expenses:[[value]]",
+//                 "fillAlphas": 0.8,
+//                 "id": "AmGraph-2",
+//                 "lineAlpha": 0.2,
+//                 "title": "Expenses",
+//                 "type": "column",
+//                 "valueField": "expenses",
+//                 "fillColorsField": "color2"
+//             }
+//         ],
+//         "guides": [],
+//         "valueAxes": [{
+//             "id": "ValueAxis-1",
+//             "position": "top",
+//             "axisAlpha": 0
+//         }],
+//         "allLabels": [],
+//         "balloon": {},
+//         "titles": [],
+//         "dataProvider": [{
+//                 "year": 2014,
+//                 "income": 23.5,
+//                 "expenses": 18.1,
+//                 "color": "#7474f0",
+//                 "color2": "#C5C5FD"
+//             },
+//             {
+//                 "year": 2015,
+//                 "income": 26.2,
+//                 "expenses": 22.8,
+//                 "color": "#7474f0",
+//                 "color2": "#C5C5FD"
+//             },
+//             {
+//                 "year": 2016,
+//                 "income": 30.1,
+//                 "expenses": 23.9,
+//                 "color": "#7474f0",
+//                 "color2": "#C5C5FD"
+//             },
+//             {
+//                 "year": 2017,
+//                 "income": 29.5,
+//                 "expenses": 25.1,
+//                 "color": "#7474f0",
+//                 "color2": "#C5C5FD"
+//             },
+//             {
+//                 "year": 2018,
+//                 "income": 24.6,
+//                 "expenses": 25,
+//                 "color": "#7474f0",
+//                 "color2": "#C5C5FD"
+//             }
+//         ],
+//         "export": {
+//             "enabled": false
+//         }
+//
+//     });
+// }
+// /*--------------  bar chart 10 amchart END ------------*/
 /*--------------  bar chart 11 amchart start ------------*/
 if ($('#ambarchart4').length) {
     var chart = AmCharts.makeChart("ambarchart4", {
@@ -533,11 +533,11 @@ if ($('#ambarchart4').length) {
         "marginRight": 70,
         "dataProvider": [
 
-            {
-            "country": "USA",
-            "visits": 3025,
-            "color": "#8918FE"
-        },
+        //     {
+        //     "country": "USA",
+        //     "visits": 3025,
+        //     "color": "#8918FE"
+        // },
 
 
         //

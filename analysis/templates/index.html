@@ -91,53 +91,61 @@
                 <!-- sales report area start -->
                 <div class="sales-report-area mt-5 mb-5">
                     <div class="row">
-                        <div class="col-md-4">
-                            <div class="single-report mb-xs-30">
-                                <div class="s-report-inner pr--20 pt--30 mb-3">
-                                    <div class="icon"><i class="fa fa-btc"></i></div>
-                                    <div class="s-report-title d-flex justify-content-between">
-                                        <h4 class="header-title mb-0">Bitcoin</h4>
-                                        <p>24 H</p>
-                                    </div>
-                                    <div class="d-flex justify-content-between pb-2">
-                                        <h2>$ 4567809,987</h2>
-                                        <span>- 45.87</span>
-                                    </div>
-                                </div>
-                                <canvas id="coin_sales1" height="100"></canvas>
-                            </div>
+{#                        <div class="col-md-4">#}
+{#                            <div class="single-report mb-xs-30">#}
+{#                                <div class="s-report-inner pr--20 pt--30 mb-3">#}
+{#                                    <div class="icon"><i class="fa fa-btc"></i></div>#}
+{#                                    <div class="s-report-title d-flex justify-content-between">#}
+{#                                        <h4 class="header-title mb-0">Bitcoin</h4>#}
+{#                                        <p>24 H</p>#}
+{#                                    </div>#}
+{#                                    <div class="d-flex justify-content-between pb-2 scatterplot">#}
+{#                                        <h2>$ 4567809,987</h2>#}
+{#                                        <span>- 45.87</span>#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                                <canvas id="coin_sales1" height="100"></canvas>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                        <div class="col-md-4">#}
+{#                            <div class="single-report mb-xs-30">#}
+{#                                <div class="s-report-inner pr--20 pt--30 mb-3">#}
+{#                                    <div class="icon"><i class="fa fa-btc"></i></div>#}
+{#                                    <div class="s-report-title d-flex justify-content-between">#}
+{#                                        <h4 class="header-title mb-0">Bitcoin Dash</h4>#}
+{#                                        <p>24 H</p>#}
+{#                                    </div>#}
+{#                                    <div class="d-flex justify-content-between pb-2">#}
+{#                                        <h2>$ 4567809,987</h2>#}
+{#                                        <span>- 45.87</span>#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                                <canvas id="coin_sales2" height="100"></canvas>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                        <div class="col-md-4">#}
+{#                            <div class="single-report">#}
+{#                                <div class="s-report-inner pr--20 pt--30 mb-3">#}
+{#                                    <div class="icon"><i class="fa fa-eur"></i></div>#}
+{#                                    <div class="s-report-title d-flex justify-content-between">#}
+{#                                        <h4 class="header-title mb-0">Euthorium</h4>#}
+{#                                        <p>24 H</p>#}
+{#                                    </div>#}
+{#                                    <div class="d-flex justify-content-between pb-2">#}
+{#                                        <h2>$ 4567809,987</h2>#}
+{#                                        <span>- 45.87</span>#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                                <canvas id="coin_sales3" height="100"></canvas>#}
+{#                            </div>#}
+{#                        </div>#}
+                        <h3>35 Fastest times up Alpe d'Huez and doping</h3>
+                        <div class="col-md-8">
+                          <canvas id="outputCanvas" width="500" height="300"></canvas>
                         </div>
+
                         <div class="col-md-4">
-                            <div class="single-report mb-xs-30">
-                                <div class="s-report-inner pr--20 pt--30 mb-3">
-                                    <div class="icon"><i class="fa fa-btc"></i></div>
-                                    <div class="s-report-title d-flex justify-content-between">
-                                        <h4 class="header-title mb-0">Bitcoin Dash</h4>
-                                        <p>24 H</p>
-                                    </div>
-                                    <div class="d-flex justify-content-between pb-2">
-                                        <h2>$ 4567809,987</h2>
-                                        <span>- 45.87</span>
-                                    </div>
-                                </div>
-                                <canvas id="coin_sales2" height="100"></canvas>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="single-report">
-                                <div class="s-report-inner pr--20 pt--30 mb-3">
-                                    <div class="icon"><i class="fa fa-eur"></i></div>
-                                    <div class="s-report-title d-flex justify-content-between">
-                                        <h4 class="header-title mb-0">Euthorium</h4>
-                                        <p>24 H</p>
-                                    </div>
-                                    <div class="d-flex justify-content-between pb-2">
-                                        <h2>$ 4567809,987</h2>
-                                        <span>- 45.87</span>
-                                    </div>
-                                </div>
-                                <canvas id="coin_sales3" height="100"></canvas>
-                            </div>
+                            smthng else
                         </div>
                     </div>
                 </div>
@@ -154,7 +162,10 @@
                                         <option value="0">01 July 2018</option>
                                     </select>
                                 </div>
-                                <div id="verview-shart"></div>
+{#                                <div id="verview-shart"></div>#}
+
+                                <canvas id="verview-shart" width="800" height="450"></canvas>
+
                             </div>
                         </div>
                     </div>
@@ -482,6 +493,16 @@
             </div>
         </div>
     </div>
+
+
+
+
+
+
+
+
+
+
     <!-- offset area end -->
     <!-- jquery latest version -->
     <script src="{% static 'assets/js/vendor/jquery-2.2.4.min.js' %}"></script>
@@ -511,5 +532,191 @@
     <script src="{% static 'assets/js/plugins.js' %}"></script>
     <script src="{% static 'assets/js/scripts.js' %}"></script>
 
+    <script src="{% static 'cht.js' %}"></script>
+
+
+{% autoescape off %}
+<script type="text/javascript">
+
+    new Chart(document.getElementById("verview-shart"), {
+  type: 'line',
+  data: {
+    labels: [
+
+        {#1500,1600,1700,1750,1800,1850,1900,1950,1999,2050#}
+        {% for row in growthtrend %}
+            {% if forloop.counter >= 11 and forloop.counter <= 21 %}
+                {{ row.year }},
+            {% endif %}
+        {% endfor %}
+
+    ],
+    datasets: [{
+        //Entire home/apt
+        data: [
+            {#86,114,106,106,107,111,133,221,783,2478#}
+            0,
+            {% for row in growthtrend %}
+            {% if forloop.counter >= 1 and forloop.counter <= 10 %}
+                {{ row.counter }},
+            {% endif %}
+        {% endfor %}
+        ],
+        label: "Entire home/apt",
+        borderColor: "#3e95cd",
+        fill: false
+      }, {
+        //Private Room
+        data: [
+            {#282,350,411,502,635,809,947,1402,3700,5267#}
+            {% for row in growthtrend %}
+            {% if forloop.counter >= 11 and forloop.counter <= 21 %}
+                {{ row.counter }},
+            {% endif %}
+        {% endfor %}
+
+        ],
+        label: "Private room",
+        borderColor: "#8e5ea2",
+        fill: false
+      }, {
+        data: [
+
+            {#168,170,178,190,203,276,408,547,675,734#}
+            0,0,0,
+            {% for row in growthtrend %}
+            {% if forloop.counter >= 22 %}
+                {{ row.counter }},
+            {% endif %}
+        {% endfor %}
+
+
+        ],
+        label: "Shared room",
+        borderColor: "#3cba9f",
+        fill: false
+      }
+
+
+    ]
+  },
+  options: {
+    title: {
+      display: true,
+      text: 'World population per region (in millions)'
+    }
+  }
+});
+
+    {#Scatter Plot#}
+
+var ctx = document.getElementById("outputCanvas").getContext('2d');
+
+  /*var description = document.getElementById("description");
+  description.innerText = response.data.description;*/
+  var myChart = new Chart(ctx, {
+    type: 'scatter',
+    data: {
+      label: 'Scatter Dataset',
+      datasets: [{
+          data: [
+
+              {% for row in scatterboxplot %}
+              {
+                  x:{{ row.availability }}, y:{{ row.totalprice }}
+              },
+              {% endfor %}
+              ,
+
+          ],
+          label: 'Scattered Box Plot',
+          backgroundColor: 'rgba(255, 0, 0, 1)',
+        },
+        ]
+    },
+    options: {
+      title: {
+        display: true,
+        text: "35 Fastest times up Alpe d'Huez"
+      },
+      legend: {
+        display: true,
+      },
+
+      showLines: false,
+      scales: {
+        yAxes: [{
+          display: true,
+          scaleLabel: {
+            display: true,
+            labelString: 'Price',
+            fontSize: 16
+          },
+          ticks: {
+            beginAtZero:true,
+            fontSize: 14
+          }
+        }],
+        xAxes: [{
+          type: 'linear',
+          position: 'bottom',
+          display: true,
+          scaleLabel: {
+            display: true,
+            labelString: 'Availability',
+            fontSize: 16
+          },
+          gridLines: {
+            display: true
+          },
+          ticks: {
+            beginAtZero:false,
+            fontSize: 14,
+          }
+        }]
+      },
+      tooltips: {
+        displayColors: false,
+        callbacks: {
+          title: function(tooltipItems, data) {
+            var index = tooltipItems[0].index;
+            var datasetIndex = tooltipItems[0].datasetIndex;
+            var dataset = data.datasets[datasetIndex];
+            var datasetItem = dataset.data[index];
+
+            var person = response.data[datasetItem.id];
+            return person.Name + " - " + person.Nationality;
+          },
+          label: function(tooltipItems, data) {
+            var output = "";
+
+            var index = tooltipItems.index;
+            var datasetIndex = tooltipItems.datasetIndex;
+            var dataset = data.datasets[datasetIndex];
+            var datasetItem = dataset.data[index];
+
+            var person = response.data[datasetItem.id];
+
+            output += "TIme: " + person.Time + "\n | \n";
+            output += "Place: " + person.Place + "\n | \n";
+            output += "Year: " + person.Year + "\n | \n";
+            if (person.Doping === "") {
+              output += "Doping: None";
+            } else {
+              output += "Doping: " + person.Doping;
+            }
+            return output;
+          }
+        }
+      }
+    }
+  })
+  .catch(function (error) {
+  console.log(error);
+});
+
+
+</script>
+{% endautoescape %}
 
 {% endblock %}

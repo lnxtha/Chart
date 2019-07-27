@@ -47,6 +47,9 @@ class Listings(models.Model):
     review_scores_communications = models.TextField(null=True, blank=True)
     review_scores_location = models.TextField(null=True, blank=True)
     review_scores_value = models.TextField(null=True, blank=True)
+    # year = models.TextField(null=True, blank=True)
+    # date = models.TextField(null=True, blank=True)
+    #counter = models.TextField(null=True, blank=True)
 
 
     class Meta:
@@ -57,6 +60,7 @@ class Listings(models.Model):
 class Reviews(models.Model):
     #listing_id = models.IntegerField(null=True, blank=True)
     date = models.DateField()
+    test = models.TextField()
 
     def __str__(self):
         return self.listing_id

@@ -69,12 +69,12 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'dashboard.wsgi.application'
-#
-#
-# Database
+
+
+#Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
-
-
+#
+#
 #
 # DATABASES = {
 #     'default': {
@@ -87,10 +87,10 @@ WSGI_APPLICATION = 'dashboard.wsgi.application'
 DATABASES = {
 'default': {
     'ENGINE': 'sql_server.pyodbc',
-        'NAME': 'zzz_db_visual',
-        'USER': 'diya@diya',
+        'NAME': 'DataVisualization',
+        'USER': 'diya@datavisualization',
         'PASSWORD': 'shrestha123@',
-        'HOST': 'diya.database.windows.net',
+        'HOST': 'datavisualization.database.windows.net',
     'PORT': '',
     'OPTIONS': {
         'driver': 'ODBC Driver 17 for SQL Server',

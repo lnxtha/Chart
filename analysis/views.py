@@ -35,8 +35,10 @@ class PricingStrategy(View):
     def get(self,request):
 
         template_name = 'pricing_strategy.html'
-        variable_to_template = 'hello'
-        return render(request, template_name, {'context':variable_to_template, 'price_act':'active'} )
+        context = {
+            'averagepricebyroomtype':Listings.objects.raw('select 1 as id,room_type, round(avg(cast(price as float)),2) as average_price from analysis_listings group by room_type')
+        }
+        return render(request, template_name, context )
 
 
 class CustomerSatisfaction(View):

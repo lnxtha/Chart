@@ -37,7 +37,7 @@ class PricingStrategy(View):
         template_name = 'pricing_strategy.html'
         context = {
             'averagepricebyroomtype':Listings.objects.raw('select 1 as id,room_type, round(avg(cast(price as float)),2) as average_price from analysis_listings group by room_type order by room_type'),
-            'scatterplot': Listings.objects.raw('select 1 as id, price, count(l.id) as listidcount from analysis_listings l join analysis_reviews r on l.id = r.id group by price;')
+            'scatterplot': Listings.objects.raw('select 1 as id, price, count(l.id) as listidcount from analysis_listings l join analysis_reviews r on l.id = r.id  where price < 1500 group by price')
         }
         return render(request, template_name, context )
 

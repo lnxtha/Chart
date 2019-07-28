@@ -75,7 +75,7 @@
                     <div class="col-sm-6 clearfix">
                         <div class="user-profile pull-right">
                             <img class="avatar user-thumb" src="{% static 'assets/images/author/avatar.png' %}" alt="avatar">
-                            <h4 class="user-name dropdown-toggle" data-toggle="dropdown">Kumkum Rai <i class="fa fa-angle-down"></i></h4>
+                            <h4 class="user-name dropdown-toggle" data-toggle="dropdown">Dorukhan <i class="fa fa-angle-down"></i></h4>
                             <div class="dropdown-menu">
                                 <a class="dropdown-item" href="#">Message</a>
                                 <a class="dropdown-item" href="#">Settings</a>
@@ -94,7 +94,10 @@
                     <div class="col-md-4">
                         <div class="single-report mb-xs-30">
                             <div class="s-report-inner pr--20 pt--30 mb-3">
-                                <div class="icon"><i class="fa fa-btc"></i></div>
+                                <div class="icon">
+<!--                                     <img src="{% static 'assets/images/icon/icon3.png' %}">-->
+<!--                                    <i class="fa fa-btc"></i>-->
+                                </div>
                                 <div class="s-report-title d-flex justify-content-between">
                                     <h3 class="header-title mb-0">{{ row.room_type }}</h3>
                                 </div>
@@ -304,7 +307,7 @@ if ($('#coin_sales2').length) {
                     {% if forloop.counter >= 11 and forloop.counter <= 21 %}
                     {{ row.average }},
                     {% endif %}
-                {% endfor %}
+                    {% endfor %}
                 ],
             }]
         },
@@ -452,7 +455,7 @@ if ($('#coin_sales3').length) {
     options: {
     title: {
     display: true,
-    text: "35 Fastest times up Alpe d'Huez"
+    text: "Relationship between Number of Booking and Price"
     },
     legend: {
     display: true,

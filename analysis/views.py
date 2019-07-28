@@ -41,7 +41,7 @@ class PricingStrategy(View):
             'scatterplot': Listings.objects.raw('select 1 as id, price, count(l.id) as listidcount from analysis_listings l join analysis_reviews r on l.id = r.id  where price < 1500 group by price'),
             'linechart': Listings.objects.raw("select 1 as id, Datepart(year,date) as year , Datepart(month,date) as month , avg(cast(price as float)) as avg_price from analysis_listings l join analysis_reviews r on l.id = r.id where Datepart(year,date) in ('2018','2019') group by Datepart(year,date), Datepart(month,date) order by Datepart(year,date), Datepart(month,date) asc")
         }
-        return render(request, template_name, context )
+        return render(request, template_name, context)
 
 
 class CustomerSatisfaction(View):

@@ -37,8 +37,9 @@ class PricingStrategy(View):
         template_name = 'pricing_strategy.html'
         context = {
             'averagepricebyroomtype':Listings.objects.raw('select 1 as id,room_type, round(avg(cast(price as float)),2) as average_price from analysis_listings group by room_type order by room_type'),
-            'averagepricebyroomtypeyearwise': Listings.objects.raw('select 1 as id, datepart(year,r.date) as year,l.room_type,avg(cast(l.price as float)) as average from analysis_listings l inner join analysis_reviews r on l.id=r.id group by datepart(year,r.date),l.room_type order by l.room_type'),
-            'scatterplot': Listings.objects.raw('select 1 as id, price, count(l.id) as listidcount from analysis_listings l join analysis_reviews r on l.id = r.id  where price < 1500 group by price')
+            'averagepricebyroomtypeyearwise': Listings.objects.raw('select 1 as id, datepart(year,r.date) as year,l.room_type, round(avg(cast(l.price as float)),2) as average from analysis_listings l inner join analysis_reviews r on l.id=r.id group by datepart(year,r.date),l.room_type order by l.room_type'),
+            'scatterplot': Listings.objects.raw('select 1 as id, price, count(l.id) as listidcount from analysis_listings l join analysis_reviews r on l.id = r.id  where price < 1500 group by price'),
+            'linechart': Listings.objects.raw("select 1 as id, Datepart(year,date) as year , Datepart(month,date) as month , avg(cast(price as float)) as avg_price from analysis_listings l join analysis_reviews r on l.id = r.id where Datepart(year,date) in ('2018','2019') group by Datepart(year,date), Datepart(month,date) order by Datepart(year,date), Datepart(month,date) asc")
         }
         return render(request, template_name, context )
 

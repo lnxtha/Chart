@@ -407,7 +407,7 @@ var map = AmCharts.makeChart("seomap", {
         "map": "worldLow",
         "images": [
 
-            {% for object in listfobjects %}
+            {% for object in listofobjects %}
 
 
             {
@@ -477,11 +477,17 @@ function createCustomMarker(image) {
     // append the marker to the map container
     image.chart.chartDiv.appendChild(holder);
 
+
+
     return holder;
 }
 /* ------------- map amchart 7 END ------------ */
 
-
+    chart.homeZoomLevel = 50;
+chart.homeGeoPoint = {
+latitude: 52,
+longitude: 11
+};
 
 </script>
 {% endautoescape %}

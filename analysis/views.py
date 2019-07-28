@@ -21,9 +21,8 @@ class DashboardHome(View):
          Listings.objects.raw('select top 10  1 as id, neighbourhood, count(l.id) as total from analysis_listings l join analysis_reviews r on l.id = r.id group by neighbourhood order by count(l.id) asc'),
             'barchart_descending':
          Listings.objects.raw('select top 10  1 as id, neighbourhood, count(l.id) as total from analysis_listings l join analysis_reviews r on l.id = r.id group by neighbourhood order by count(l.id) desc'),
-        'piechart': Listings.objects.raw('select 1 as id, l.room_type roomtype, (Count(c.id)* 100 / (Select Count(*) From analysis_calendars)) as percentg from analysis_listings l join analysis_calendars c on l.id =  c.id group by room_type')
-
-
+        'piechart': Listings.objects.raw('select 1 as id, l.room_type roomtype, (Count(c.id)* 100 / (Select Count(*) From analysis_calendars)) as percentg from analysis_listings l join analysis_calendars c on l.id =  c.id group by room_type'),
+            'listofobjects':Listings.objects.all()[:1000]
         }
         return render(request, template_name, context)
 
@@ -47,10 +46,8 @@ class PricingStrategy(View):
 class CustomerSatisfaction(View):
     def get(self,request):
         template_name = 'customer_satisfaction.html'
-        context = {
-            'listfobjects': Listings.objects.raw('select * from analysis_listings')
-        }
-        return render(request, template_name, context)
+        return render(request, template_name,{'listofobjects':
+                                              Listings.objects.all()[:1000]})
 
 
 class BarChart(View):

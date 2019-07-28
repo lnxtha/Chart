@@ -616,7 +616,7 @@
   options: {
     title: {
       display: true,
-      text: 'World population per region (in millions)'
+      text: 'Annual Growth Trend by Room Type'
     }
   }
 });
@@ -852,12 +852,24 @@ if ($('#highpiechart4').length) {
             plotShadow: false,
             type: 'pie'
         },
+
         title: {
-            text: 'Dollar market Values, 2018'
+            text: '<h3>Number of Listing by Room Type</h3>'
         },
         tooltip: {
             pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
         },
+        legend:
+        {
+        labels:
+         {
+            generateLabels: function(chart)
+             {
+                 // Here
+            }
+         }
+         },
+
         plotOptions: {
             pie: {
                 allowPointSelect: true,
@@ -865,10 +877,10 @@ if ($('#highpiechart4').length) {
                 colors: pieColors,
                 dataLabels: {
                     style: { "color": "contrast", "fontSize": "11px", "fontWeight": "bold", "textOutline": "",
-                    "margin":"10px"},
+                    "margin":"8px"},
                     enabled: true,
                     format: '<b>{point.name}</b><br>{point.percentage:.1f} %',
-                    distance: -40,
+                    distance: -80,
                     filter: {
                         property: 'percentage',
                         operator: '>',

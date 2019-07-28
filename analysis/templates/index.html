@@ -8,90 +8,92 @@
 
 
 
-        <!-- sidebar menu area end -->
-        <!-- main content area start -->
-        <div class="main-content">
-            <!-- header area start -->
-            <div class="header-area">
-                <div class="row align-items-center">
-                    <!-- nav and search button -->
-                    <div class="col-md-6 col-sm-8 clearfix">
-                        <div class="nav-btn pull-left">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
-                        <div class="search-box pull-left">
-                            <form action="#">
-                                <input type="text" name="search" placeholder="Search..." required>
-                                <i class="ti-search"></i>
-                            </form>
-                        </div>
+    <!-- sidebar menu area end -->
+    <!-- main content area start -->
+    <div class="main-content">
+        <!-- header area start -->
+        <div class="header-area">
+            <div class="row align-items-center">
+                <!-- nav and search button -->
+                <div class="col-md-6 col-sm-8 clearfix">
+                    <div class="nav-btn pull-left">
+                        <span></span>
+                        <span></span>
+                        <span></span>
                     </div>
-                    <!-- profile info & task notification -->
-                    <div class="col-md-6 col-sm-4 clearfix">
-                        <ul class="notification-area pull-right">
-                            <li id="full-view"><i class="ti-fullscreen"></i></li>
-                            <li id="full-view-exit"><i class="ti-zoom-out"></i></li>
-                            <li class="dropdown">
-                                <i class="ti-bell dropdown-toggle" data-toggle="dropdown">
-                                    <span>0</span>
-                                </i>
-                                <div class="dropdown-menu bell-notify-box notify-box">
-                                    <span class="notify-title">You have no notifications <a href="#">view all</a></span>
-                                    <div class="nofity-list">
+                    <div class="search-box pull-left">
+                        <form action="#">
+                            <input type="text" name="search" placeholder="Search..." required>
+                            <i class="ti-search"></i>
+                        </form>
+                    </div>
+                </div>
+                <!-- profile info & task notification -->
+                <div class="col-md-6 col-sm-4 clearfix">
+                    <ul class="notification-area pull-right">
+                        <li id="full-view"><i class="ti-fullscreen"></i></li>
+                        <li id="full-view-exit"><i class="ti-zoom-out"></i></li>
+                        <li class="dropdown">
+                            <i class="ti-bell dropdown-toggle" data-toggle="dropdown">
+                                <span>0</span>
+                            </i>
+                            <div class="dropdown-menu bell-notify-box notify-box">
+                                <span class="notify-title">You have no notifications <a href="#">view all</a></span>
+                                <div class="nofity-list">
 
-                                    </div>
                                 </div>
-                            </li>
-                            <li class="dropdown">
-                                <i class="fa fa-envelope-o dropdown-toggle" data-toggle="dropdown"><span>0</span></i>
-                                <div class="dropdown-menu notify-box nt-enveloper-box">
-                                    <span class="notify-title">You have no new notifications <a href="#">view all</a></span>
-                                    <div class="nofity-list">
+                            </div>
+                        </li>
+                        <li class="dropdown">
+                            <i class="fa fa-envelope-o dropdown-toggle" data-toggle="dropdown"><span>0</span></i>
+                            <div class="dropdown-menu notify-box nt-enveloper-box">
+                                <span class="notify-title">You have no new notifications <a href="#">view all</a></span>
+                                <div class="nofity-list">
 
-                                    </div>
                                 </div>
-                            </li>
-                            <li class="settings-btn">
-                                <i class="ti-settings"></i>
-                            </li>
+                            </div>
+                        </li>
+                        <li class="settings-btn">
+                            <i class="ti-settings"></i>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- header area end -->
+        <!-- page title area start -->
+        <div class="page-title-area">
+            <div class="row align-items-center">
+                <div class="col-sm-6">
+                    <div class="breadcrumbs-area clearfix">
+                        <h4 class="page-title pull-left">Dashboard</h4>
+                        <ul class="breadcrumbs pull-left">
+                            <li><a href="index.html">Home</a></li>
+                            <li><span>Dashboard</span></li>
                         </ul>
                     </div>
                 </div>
-            </div>
-            <!-- header area end -->
-            <!-- page title area start -->
-            <div class="page-title-area">
-                <div class="row align-items-center">
-                    <div class="col-sm-6">
-                        <div class="breadcrumbs-area clearfix">
-                            <h4 class="page-title pull-left">Dashboard</h4>
-                            <ul class="breadcrumbs pull-left">
-                                <li><a href="index.html">Home</a></li>
-                                <li><span>Dashboard</span></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 clearfix">
-                        <div class="user-profile pull-right">
-                            <img class="avatar user-thumb" src="{% static 'assets/images/author/avatar.png' %}" alt="avatar">
-                            <h4 class="user-name dropdown-toggle" data-toggle="dropdown">Dorukhan <i class="fa fa-angle-down"></i></h4>
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item" href="#">Message</a>
-                                <a class="dropdown-item" href="#">Settings</a>
-                                <a class="dropdown-item" href="#">Log Out</a>
-                            </div>
+                <div class="col-sm-6 clearfix">
+                    <div class="user-profile pull-right">
+                        <img class="avatar user-thumb" src="{% static 'assets/images/author/avatar.png' %}"
+                             alt="avatar">
+                        <h4 class="user-name dropdown-toggle" data-toggle="dropdown">Dorukhan <i
+                                class="fa fa-angle-down"></i></h4>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Message</a>
+                            <a class="dropdown-item" href="#">Settings</a>
+                            <a class="dropdown-item" href="#">Log Out</a>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- page title area end -->
-            <div class="main-content-inner">
+        </div>
+        <!-- page title area end -->
+        <div class="main-content-inner">
 
 
-                <div class="row">
-                    {% for row in averagepricebyroomtype %}
+            <div class="row">
+                {% for row in averagepricebyroomtype %}
                     <div class="col-md-4">
                         <div class="single-report mb-xs-30">
                             <div class="s-report-inner pr--20 pt--30 mb-3">
@@ -108,337 +110,63 @@
                             <canvas id="coin_sales1" height="100"></canvas>
                         </div>
                     </div>
-                    {% endfor %}
+                {% endfor %}
+            </div>
+            <div class="row">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <h4 class="header-title mb-0">Overview</h4>
+                        </div>
+                        <canvas id="verview-shart" width="600" height="200"></canvas>
+                    </div>
                 </div>
+            </div>
+
+
+            <!-- sales report area start -->
+            <div class="sales-report-area mt-5 mb-5">
                 <div class="row">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <h4 class="header-title mb-0">Overview</h4>
-                                </div>
-                                <canvas id="verview-shart" width="600" height="200"></canvas>
-                            </div>
+                    <canvas id="outputCanvas" width="600" height="200"></canvas>
+                </div>
+            </div>
+
+            <div class="row" style="margin-top: 2%; margin-bottom: 2%;">
+
+                <div class="col-md-6 mt-5">
+                    <div class="card">
+                        <h3>Booking bar chart (Order by Ascending)</h3>
+                        <div class="card-body">
+                            <canvas id="barChart1" width="400" height="400"></canvas>
                         </div>
+                    </div>
                 </div>
 
 
-
-                <!-- sales report area start -->
-                <div class="sales-report-area mt-5 mb-5">
-                    <div class="row">
-                        <canvas id="outputCanvas" width="600" height="200"></canvas>
-                    </div>
-                </div>
-
-                <div class="row" style="margin-top: 2%; margin-bottom: 2%;">
-
-                    <div class="col-md-6 mt-5">
-                        <div class="card">
-                            <h3>Booking bar chart (Order by Ascending)</h3>
-                            <div class="card-body">
-                                <canvas id="barChart1" width="400" height="400"></canvas>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="col-md-6 mt-5">
-                        <div class="card">
-                            <h3>Booking bar chart (Order by Descending)</h3>
-                            <div class="card-body">
-                                <canvas id="barChart2" width="400" height="400"></canvas>
-                            </div>
-                        </div>
-                    </div>
-
-
-                </div>
-
-
-                <div class="row"style="margin-top:2%; margin-bottom: 2%" >
-
-                        <div id="highpiechart4"></div>
-
-                </div>
-
-
-                <!-- market value area start -->
-                <div class="row mt-5 mb-5">
-                    <div class="col-12">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="d-sm-flex justify-content-between align-items-center">
-                                    <h4 class="header-title mb-0">Market Value And Trends</h4>
-                                    <select class="custome-select border-0 pr-3">
-                                        <option selected>Last 24 Hours</option>
-                                        <option value="0">01 July 2018</option>
-                                    </select>
-                                </div>
-                                <div class="market-status-table mt-4">
-                                    <div class="table-responsive">
-                                        <table class="dbkit-table">
-                                            <tr class="heading-td">
-                                                <td class="mv-icon">Logo</td>
-                                                <td class="coin-name">Coin Name</td>
-                                                <td class="buy">Buy</td>
-                                                <td class="sell">Sells</td>
-                                                <td class="trends">Trends</td>
-                                                <td class="attachments">Attachments</td>
-                                                <td class="stats-chart">Stats</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="mv-icon"><img src="{% static 'assets/images/icon/market-value/icon1.png' %}" alt="icon">
-                                                </td>
-                                                <td class="coin-name">Dashcoin</td>
-                                                <td class="buy">30% <img src="{% static 'assets/images/icon/market-value/triangle-down.png' %}" alt="icon"></td>
-                                                <td class="sell">20% <img src="{% static 'assets/images/icon/market-value/triangle-up.png' %}" alt="icon"></td>
-                                                <td class="trends"><img src="{% static 'assets/images/icon/market-value/trends-up-icon.png' %}" alt="icon"></td>
-                                                <td class="attachments">$ 56746,857</td>
-                                                <td class="stats-chart">
-                                                    <canvas id="mvaluechart"></canvas>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="mv-icon">
-                                                    <div class="mv-icon"><img src="{% static 'assets/images/icon/market-value/icon2.png' %}" alt="icon"></div>
-                                                </td>
-                                                <td class="coin-name">LiteCoin</td>
-                                                <td class="buy">30% <img src="{% static 'assets/images/icon/market-value/triangle-down.png' %}" alt="icon"></td>
-                                                <td class="sell">20% <img src="{% static 'assets/images/icon/market-value/triangle-up.png' %}" alt="icon"></td>
-                                                <td class="trends"><img src="{% static 'assets/images/icon/market-value/trends-down-icon.png' %}" alt="icon"></td>
-                                                <td class="attachments">$ 56746,857</td>
-                                                <td class="stats-chart">
-                                                    <canvas id="mvaluechart2"></canvas>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="mv-icon">
-                                                    <div class="mv-icon"><img src="{% static 'assets/images/icon/market-value/icon3.png' %}" alt="icon"></div>
-                                                </td>
-                                                <td class="coin-name">Euthorium</td>
-                                                <td class="buy">30% <img src="{% static 'assets/images/icon/market-value/triangle-down.png' %}" alt="icon"></td>
-                                                <td class="sell">20% <img src="{% static 'assets/images/icon/market-value/triangle-up.png' %}" alt="icon"></td>
-                                                <td class="trends"><img src="{% static 'assets/images/icon/market-value/trends-up-icon.png' %}" alt="icon"></td>
-                                                <td class="attachments">$ 56746,857</td>
-                                                <td class="stats-chart">
-                                                    <canvas id="mvaluechart3"></canvas>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="mv-icon">
-                                                    <div class="mv-icon"><img src="{% static 'assets/images/icon/market-value/icon4.png' %}" alt="icon"></div>
-                                                </td>
-                                                <td class="coin-name">Bitcoindash</td>
-                                                <td class="buy">30% <img src="{% static 'assets/images/icon/market-value/triangle-down.png' %}" alt="icon"></td>
-                                                <td class="sell">20% <img src="{% static 'assets/images/icon/market-value/triangle-up.png' %}" alt="icon"></td>
-                                                <td class="trends"><img src="{% static 'assets/images/icon/market-value/trends-up-icon.png' %}" alt="icon"></td>
-                                                <td class="attachments">$ 56746,857</td>
-                                                <td class="stats-chart">
-                                                    <canvas id="mvaluechart4"></canvas>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
+                <div class="col-md-6 mt-5">
+                    <div class="card">
+                        <h3>Booking bar chart (Order by Descending)</h3>
+                        <div class="card-body">
+                            <canvas id="barChart2" width="400" height="400"></canvas>
                         </div>
                     </div>
                 </div>
-                <!-- market value area end -->
-                <!-- row area start -->
-                <div class="row">
-                    <!-- Live Crypto Price area start -->
-                    <div class="col-lg-4">
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="header-title">Live Crypto Price</h4>
-                                <div class="cripto-live mt-5">
-                                    <ul>
-                                        <li>
-                                            <div class="icon b">b</div> Bitcoin<span><i class="fa fa-long-arrow-up"></i>$876909.00</span></li>
-                                        <li>
-                                            <div class="icon l">l</div> Litecoin<span><i class="fa fa-long-arrow-up"></i>$29780.00</span></li>
-                                        <li>
-                                            <div class="icon d">d</div> Dashcoin<span><i class="fa fa-long-arrow-up"></i>$13276.00</span></li>
-                                        <li>
-                                            <div class="icon b">b</div> Bitcoindash<span><i class="fa fa-long-arrow-down"></i>$5684.890</span></li>
-                                        <li>
-                                            <div class="icon e">e</div> Euthorium<span><i class="fa fa-long-arrow-down"></i>$3890.98</span></li>
-                                        <li>
-                                            <div class="icon t">b</div> Tcoin<span><i class="fa fa-long-arrow-up"></i>$750.789</span></li>
-                                        <li>
-                                            <div class="icon b">b</div> Bitcoin<span><i class="fa fa-long-arrow-up"></i>$325.037</span></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Live Crypto Price area end -->
-                    <!-- trading history area start -->
-                    <div class="col-lg-8 mt-sm-30 mt-xs-30">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="d-sm-flex justify-content-between align-items-center">
-                                    <h4 class="header-title">Trading History</h4>
-                                    <div class="trd-history-tabs">
-                                        <ul class="nav" role="tablist">
-                                            <li>
-                                                <a class="active" data-toggle="tab" href="#buy_order" role="tab">Buy Order</a>
-                                            </li>
-                                            <li>
-                                                <a data-toggle="tab" href="#sell_order" role="tab">Sell Order</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <select class="custome-select border-0 pr-3">
-                                        <option selected>Last 24 Hours</option>
-                                        <option value="0">01 July 2018</option>
-                                    </select>
-                                </div>
-                                <div class="trad-history mt-4">
-                                    <div class="tab-content" id="myTabContent">
-                                        <div class="tab-pane fade show active" id="buy_order" role="tabpanel">
-                                            <div class="table-responsive">
-                                                <table class="dbkit-table">
-                                                    <tr class="heading-td">
-                                                        <td>Trading ID</td>
-                                                        <td>Time</td>
-                                                        <td>Status</td>
-                                                        <td>Amount</td>
-                                                        <td>Last Trade</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>78211</td>
-                                                        <td>4.00 AM</td>
-                                                        <td>Pending</td>
-                                                        <td>$758.90</td>
-                                                        <td>$05245.090</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>782782</td>
-                                                        <td>4.00 AM</td>
-                                                        <td>Pending</td>
-                                                        <td>$77878.90</td>
-                                                        <td>$7778.090</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>89675978</td>
-                                                        <td>4.00 AM</td>
-                                                        <td>Pending</td>
-                                                        <td>$0768.90</td>
-                                                        <td>$0945.090</td>
-                                                    </tr>
-                                                </table>
-                                            </div>
-                                        </div>
-                                        <div class="tab-pane fade" id="sell_order" role="tabpanel">
-                                            <div class="table-responsive">
-                                                <table class="dbkit-table">
-                                                    <tr class="heading-td">
-                                                        <td>Trading ID</td>
-                                                        <td>Time</td>
-                                                        <td>Status</td>
-                                                        <td>Amount</td>
-                                                        <td>Last Trade</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>8964978</td>
-                                                        <td>4.00 AM</td>
-                                                        <td>Pending</td>
-                                                        <td>$445.90</td>
-                                                        <td>$094545.090</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>89675978</td>
-                                                        <td>4.00 AM</td>
-                                                        <td>Pending</td>
-                                                        <td>$78.90</td>
-                                                        <td>$074852945.090</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>78527878</td>
-                                                        <td>4.00 AM</td>
-                                                        <td>Pending</td>
-                                                        <td>$0768.90</td>
-                                                        <td>$65465.090</td>
-                                                    </tr>
-                                                </table>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- trading history area end -->
-                </div>
-                <!-- row area end -->
-                <div class="row mt-5">
-                    <!-- latest news area start -->
-                    <div class="col-xl-6">
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="header-title">Latest News</h4>
-                                <div class="letest-news mt-5">
-                                    <div class="single-post mb-xs-40 mb-sm-40">
-                                        <div class="lts-thumb">
-                                            <img src="{% static 'assets/images/blog/post-thumb1.jpg' %}" alt="post thumb">
-                                        </div>
-                                        <div class="lts-content">
-                                            <span>Admin Post</span>
-                                            <h2><a href="blog.html">Sed ut perspiciatis unde omnis iste.</a></h2>
-                                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some...</p>
-                                        </div>
-                                    </div>
-                                    <div class="single-post">
-                                        <div class="lts-thumb">
-                                            <img src="{% static 'assets/images/blog/post-thumb2.jpg' %}" alt="post thumb">
-                                        </div>
-                                        <div class="lts-content">
-                                            <span>Admin Post</span>
-                                            <h2><a href="blog.html">Sed ut perspiciatis unde omnis iste.</a></h2>
-                                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some...</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- latest news area end -->
-                    <!-- exchange area start -->
-                    <div class="col-xl-6 mt-md-30 mt-xs-30 mt-sm-30">
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="header-title">Exchange</h4>
-                                <div class="exhcange-rate mt-5">
-                                    <form action="#">
-                                        <div class="input-form">
-                                            <input type="text" value="0.76834">
-                                            <span>BTC</span>
-                                        </div>
-                                        <div class="exchange-devider">To</div>
-                                        <div class="input-form">
-                                            <input type="text" value="5689.846">
-                                            <span>USD</span>
-                                        </div>
-                                        <div class="exchange-btn">
-                                            <button type="submit">Exchange Now</button>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- exchange area end -->
-                </div>
-                <!-- row area start-->
+
+
+            </div>
+
+
+            <div class="row" style="margin-top:2%; margin-bottom: 2%">
+
+                <div id="highpiechart4"></div>
+
             </div>
         </div>
         <!-- main content area end -->
         <!-- footer area start-->
         <footer>
             <div class="footer-area">
-                <p>© Copyright 2018. All right reserved.</p>
+                <p></p>
             </div>
         </footer>
         <!-- footer area end-->
@@ -465,7 +193,7 @@
                             <div class="s-sw-title">
                                 <h5>Notifications</h5>
                                 <div class="s-swtich">
-                                    <input type="checkbox" id="switch1" />
+                                    <input type="checkbox" id="switch1"/>
                                     <label for="switch1">Toggle</label>
                                 </div>
                             </div>
@@ -503,10 +231,10 @@
     <script src="{% static 'assets/js/highcharts.js' %}"></script>
     <!-- start zingchart js -->
     <script src="{% static 'assets/js/zingchart.min.js' %}"></script>
-{#    <script>#}
-{#    zingchart.MODULESDIR = "https://cdn.zingchart.com/modules/";#}
-{#    ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9", "ee6b7db5b51705a13dc2339db3edaf6d"];#}
-{#    </script>#}
+    {#    <script>#}
+    {#    zingchart.MODULESDIR = "https://cdn.zingchart.com/modules/";#}
+    {#    ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9", "ee6b7db5b51705a13dc2339db3edaf6d"];#}
+    {#    </script>#}
     <!-- all line chart activation -->
     <script src="{% static 'assets/js/line-chart.js' %}"></script>
     <!-- all pie chart -->
@@ -517,7 +245,7 @@
     <!-- others plugins -->
     <script src="{% static 'assets/js/plugins.js' %}"></script>
     <script src="{% static 'assets/js/scripts.js' %}"></script>
-        <!-- start amchart js -->
+    <!-- start amchart js -->
     <script src="{% static 'assets/js/amcharts.js' %}"></script>
 
     <script src="{% static 'cht.js' %}"></script>
@@ -525,7 +253,7 @@
 
 
 
-     <script src="{% static 'assets/js/vendor/jquery-2.2.4.min.js' %}"></script>
+    <script src="{% static 'assets/js/vendor/jquery-2.2.4.min.js' %}"></script>
     <!-- bootstrap 4 js -->
     <script src="{% static 'assets/js/popper.min.js' %}"></script>
     <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
@@ -533,15 +261,15 @@
     <script src="{% static 'assets/js/metisMenu.min.js' %}"></script>
     <script src="{% static 'assets/js/jquery.slimscroll.min.js' %}"></script>
     <script src="{% static 'assets/js/jquery.slicknav.min.js' %}"></script>
-      <!-- start chart js -->
+    <!-- start chart js -->
     <script src="{% static 'assets/js/charts.min.js' %}"></script>
     <!-- start highcharts js -->
     <script src="{% static 'assets/js/highcharts.js' %}"></script>
     <!-- start zingchart js -->
     <script src="{% static '/assets/js/zingchart.min.js' %}"></script>
     <script>
-    zingchart.MODULESDIR = "https://cdn.zingchart.com/modules/";
-    ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9", "ee6b7db5b51705a13dc2339db3edaf6d"];
+        zingchart.MODULESDIR = "https://cdn.zingchart.com/modules/";
+        ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9", "ee6b7db5b51705a13dc2339db3edaf6d"];
     </script>
     <!-- start amchart js -->
     <script src="{% static 'assets/js/amcharts.js' %}"></script>
@@ -559,368 +287,271 @@
     <script src="{% static 'assets/js/scripts.js' %}"></script>
 
 
-{% autoescape off %}
-<script type="text/javascript">
+    {% autoescape off %}
+        <script type="text/javascript">
 
-    new Chart(document.getElementById("verview-shart"), {
-  type: 'line',
-  data: {
-    labels: [
+            new Chart(document.getElementById("verview-shart"), {
+                type: 'line',
+                data: {
+                    labels: [
 
-        {#1500,1600,1700,1750,1800,1850,1900,1950,1999,2050#}
-        {% for row in growthtrend %}
-            {% if forloop.counter >= 11 and forloop.counter <= 21 %}
-                {{ row.year }},
-            {% endif %}
-        {% endfor %}
+                        {#1500,1600,1700,1750,1800,1850,1900,1950,1999,2050#}
+                        {% for row in growthtrend %}
+                            {% if forloop.counter >= 11 and forloop.counter <= 21 %}
+                                {{ row.year }},
+                            {% endif %}
+                        {% endfor %}
 
-    ],
-    datasets: [{
-        //Entire home/apt
-        data: [
-            {#86,114,106,106,107,111,133,221,783,2478#}
-            0,
-            {% for row in growthtrend %}
-            {% if forloop.counter >= 1 and forloop.counter <= 10 %}
-                {{ row.counter }},
-            {% endif %}
-        {% endfor %}
-        ],
-        label: "Entire home/apt",
-        borderColor: "#3e95cd",
-        fill: false
-      }, {
-        //Private Room
-        data: [
-            {#282,350,411,502,635,809,947,1402,3700,5267#}
-            {% for row in growthtrend %}
-            {% if forloop.counter >= 11 and forloop.counter <= 21 %}
-                {{ row.counter }},
-            {% endif %}
-        {% endfor %}
+                    ],
+                    datasets: [{
+                        //Entire home/apt
+                        data: [
+                            {#86,114,106,106,107,111,133,221,783,2478#}
+                            0,
+                            {% for row in growthtrend %}
+                                {% if forloop.counter >= 1 and forloop.counter <= 10 %}
+                                    {{ row.counter }},
+                                {% endif %}
+                            {% endfor %}
+                        ],
+                        label: "Entire home/apt",
+                        borderColor: "#3e95cd",
+                        fill: false
+                    }, {
+                        //Private Room
+                        data: [
+                            {#282,350,411,502,635,809,947,1402,3700,5267#}
+                            {% for row in growthtrend %}
+                                {% if forloop.counter >= 11 and forloop.counter <= 21 %}
+                                    {{ row.counter }},
+                                {% endif %}
+                            {% endfor %}
 
-        ],
-        label: "Private room",
-        borderColor: "#8e5ea2",
-        fill: false
-      }, {
-        data: [
+                        ],
+                        label: "Private room",
+                        borderColor: "#8e5ea2",
+                        fill: false
+                    }, {
+                        data: [
 
-            {#168,170,178,190,203,276,408,547,675,734#}
-            0,0,0,
-            {% for row in growthtrend %}
-            {% if forloop.counter >= 22 %}
-                {{ row.counter }},
-            {% endif %}
-        {% endfor %}
-
-
-        ],
-        label: "Shared room",
-        borderColor: "#3cba9f",
-        fill: false
-      }
+                            {#168,170,178,190,203,276,408,547,675,734#}
+                            0, 0, 0,
+                            {% for row in growthtrend %}
+                                {% if forloop.counter >= 22 %}
+                                    {{ row.counter }},
+                                {% endif %}
+                            {% endfor %}
 
 
-    ]
-  },
-  options: {
-    title: {
-      display: true,
-      text: 'Annual Growth Trend by Room Type'
-    }
-  }
-});
-
-    {#Scatter Plot#}
-
-var ctx = document.getElementById("outputCanvas").getContext('2d');
-
-  /*var description = document.getElementById("description");
-  description.innerText = response.data.description;*/
-  var myChart = new Chart(ctx, {
-    type: 'scatter',
-    data: {
-      label: 'Scatter Dataset',
-      datasets: [{
-          data: [
-
-              {% for row in scatterboxplot %}
-              {
-                  x:{{ row.availability }}, y:{{ row.totalprice }}
-              },
-              {% endfor %}
-              ,
-
-          ],
-          label: 'Scattered Box Plot',
-          backgroundColor: 'rgba(255, 0, 0, 1)',
-        },
-        ]
-    },
-    options: {
-      title: {
-        display: true,
-        text: "35 Fastest times up Alpe d'Huez"
-      },
-      legend: {
-        display: true,
-      },
-
-      showLines: false,
-      scales: {
-        yAxes: [{
-          display: true,
-          scaleLabel: {
-            display: true,
-            labelString: 'Price',
-            fontSize: 16
-          },
-          ticks: {
-            beginAtZero:true,
-            fontSize: 14
-          }
-        }],
-        xAxes: [{
-          type: 'linear',
-          position: 'bottom',
-          display: true,
-          scaleLabel: {
-            display: true,
-            labelString: 'Availability',
-            fontSize: 16
-          },
-          gridLines: {
-            display: true
-          },
-          ticks: {
-            beginAtZero:false,
-            fontSize: 14,
-          }
-        }]
-      },
-      tooltips: {
-        displayColors: false,
-        callbacks: {
-          title: function(tooltipItems, data) {
-            var index = tooltipItems[0].index;
-            var datasetIndex = tooltipItems[0].datasetIndex;
-            var dataset = data.datasets[datasetIndex];
-            var datasetItem = dataset.data[index];
-
-            var person = response.data[datasetItem.id];
-            return person.Name + " - " + person.Nationality;
-          },
-          label: function(tooltipItems, data) {
-            var output = "";
-
-            var index = tooltipItems.index;
-            var datasetIndex = tooltipItems.datasetIndex;
-            var dataset = data.datasets[datasetIndex];
-            var datasetItem = dataset.data[index];
-
-            var person = response.data[datasetItem.id];
-
-            output += "TIme: " + person.Time + "\n | \n";
-            output += "Place: " + person.Place + "\n | \n";
-            output += "Year: " + person.Year + "\n | \n";
-            if (person.Doping === "") {
-              output += "Doping: None";
-            } else {
-              output += "Doping: " + person.Doping;
-            }
-            return output;
-          }
-        }
-      }
-    }
-  })
-
-</script>
-{% endautoescape %}
+                        ],
+                        label: "Shared room",
+                        borderColor: "#3cba9f",
+                        fill: false
+                    }
 
 
-
-<script>
-
-    /*--------------  bar chart 11 amchart start ------------*/
-if ($('#ambarchart4').length) {
-    var chart = AmCharts.makeChart("ambarchart4", {
-        "type": "serial",
-        "theme": "light",
-        "marginRight": 70,
-        "dataProvider": [
-            {% for row in barchart_ascending %}
-            {
-            "country": "{{ row.neighbourhood }}",
-            "visits": {{ row.total }},
-            "color": "#8918FE"
-        },
-            {% endfor %}
-        ],
-        "valueAxes": [{
-            "axisAlpha": 0,
-            "position": "left",
-            "title": false
-        }],
-        "startDuration": 1,
-        "graphs": [{
-            "balloonText": "<b>[[category]]: [[value]]</b>",
-            "fillColorsField": "color",
-            "fillAlphas": 0.9,
-            "lineAlpha": 0.2,
-            "type": "column",
-            "valueField": "visits"
-        }],
-        "chartCursor": {
-            "categoryBalloonEnabled": false,
-            "cursorAlpha": 0,
-            "zoomable": false
-        },
-        "categoryField": "country",
-        "categoryAxis": {
-            "gridPosition": "start",
-            "labelRotation": 45
-        },
-        "export": {
-            "enabled": false
-        }
-    });
-}
-/*--------------  bar chart 11 amchart END ------------*/
-
-
- /*--------------  bar chart 12 amchart start ------------*/
-if ($('#ambarchart4').length) {
-    var chart = AmCharts.makeChart("ambarchart5", {
-        "type": "serial",
-        "theme": "light",
-        "marginRight": 70,
-        "dataProvider": [
-            {% for row in barchart_descending %}
-            {
-            "country": "{{ row.neighbourhood }}",
-            "visits": {{ row.total }},
-            "color": "#8918FE"
-        },
-            {% endfor %}
-        ],
-        "valueAxes": [{
-            "axisAlpha": 0,
-            "position": "left",
-            "title": false
-        }],
-        "startDuration": 1,
-        "graphs": [{
-            "balloonText": "<b>[[category]]: [[value]]</b>",
-            "fillColorsField": "color",
-            "fillAlphas": 0.9,
-            "lineAlpha": 0.2,
-            "type": "column",
-            "valueField": "visits"
-        }],
-        "chartCursor": {
-            "categoryBalloonEnabled": false,
-            "cursorAlpha": 0,
-            "zoomable": false
-        },
-        "categoryField": "country",
-        "categoryAxis": {
-            "gridPosition": "start",
-            "labelRotation": 45
-        },
-        "export": {
-            "enabled": false
-        }
-    });
-}
-/*--------------  bar chart 12 amchart END ------------*/
-
-
-
-
-
-/*-------------- 4 Pie chart highcharts start ------------*/
-if ($('#highpiechart4').length) {
-    var pieColors = (function() {
-        var colors = [],
-            base = Highcharts.getOptions().colors[0],
-            i;
-
-        for (i = 0; i < 10; i += 1) {
-            // Start out with a darkened base color (negative brighten), and end
-            // up with a much brighter color
-            colors.push(Highcharts.Color(base).brighten((i - 3) / 7).get());
-        }
-        return colors;
-    }());
-
-    // Build the chart
-    Highcharts.chart('highpiechart4', {
-        chart: {
-            plotBackgroundColor: null,
-            plotBorderWidth: null,
-            plotShadow: false,
-            type: 'pie'
-        },
-
-        title: {
-            text: '<h3>Number of Listing by Room Type</h3>'
-        },
-        tooltip: {
-            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
-        },
-        legend:
-        {
-        labels:
-         {
-            generateLabels: function(chart)
-             {
-                 // Here
-            }
-         }
-         },
-
-        plotOptions: {
-            pie: {
-                allowPointSelect: true,
-                cursor: 'pointer',
-                colors: pieColors,
-                dataLabels: {
-                    style: { "color": "contrast", "fontSize": "11px", "fontWeight": "bold", "textOutline": "",
-                    "margin":"8px"},
-                    enabled: true,
-                    format: '<b>{point.name}</b><br>{point.percentage:.1f} %',
-                    distance: -80,
-                    filter: {
-                        property: 'percentage',
-                        operator: '>',
-                        value: 4
+                    ]
+                },
+                options: {
+                    title: {
+                        display: true,
+                        text: 'Annual Growth Trend by Room Type'
                     }
                 }
-            }
-        },
-        series: [{
-            name: 'Share',
-            data: [
-                {#{ name: 'USD', y: 61.41 },#}
-                {#{ name: 'BTC', y: 11.84 },#}
-                {#{ name: 'TCN', y: 10.85 },#}
-                 {% for row in piechart %}
-                    { name: '{{ row.roomtype }}', y: {{ row.percentg }} },
-                {% endfor %}
+            });
 
-            ]
-        }]
-    });
-}
-/*-------------- 4 Pie chart highcharts end ------------*/
+            {#Scatter Plot#}
+
+            var ctx = document.getElementById("outputCanvas").getContext('2d');
+
+            /*var description = document.getElementById("description");
+            description.innerText = response.data.description;*/
+            var myChart = new Chart(ctx, {
+                type: 'scatter',
+                data: {
+                    label: 'Scatter Dataset',
+                    datasets: [{
+                        data: [
+
+                            {% for row in scatterboxplot %}
+                                {
+                                    x:{{ row.availability }}, y:{{ row.totalprice }}
+                                },
+                            {% endfor %}
+                            ,
+
+                        ],
+                        label: 'Scattered Box Plot',
+                        backgroundColor: 'rgba(255, 0, 0, 1)',
+                    },
+                    ]
+                },
+                options: {
+                    title: {
+                        display: true,
+                        text: "35 Fastest times up Alpe d'Huez"
+                    },
+                    legend: {
+                        display: true,
+                    },
+
+                    showLines: false,
+                    scales: {
+                        yAxes: [{
+                            display: true,
+                            scaleLabel: {
+                                display: true,
+                                labelString: 'Price',
+                                fontSize: 16
+                            },
+                            ticks: {
+                                beginAtZero: true,
+                                fontSize: 14
+                            }
+                        }],
+                        xAxes: [{
+                            type: 'linear',
+                            position: 'bottom',
+                            display: true,
+                            scaleLabel: {
+                                display: true,
+                                labelString: 'Availability',
+                                fontSize: 16
+                            },
+                            gridLines: {
+                                display: true
+                            },
+                            ticks: {
+                                beginAtZero: false,
+                                fontSize: 14,
+                            }
+                        }]
+                    },
+                    tooltips: {
+                        displayColors: false,
+                        callbacks: {
+                            title: function (tooltipItems, data) {
+                                var index = tooltipItems[0].index;
+                                var datasetIndex = tooltipItems[0].datasetIndex;
+                                var dataset = data.datasets[datasetIndex];
+                                var datasetItem = dataset.data[index];
+
+                                var person = response.data[datasetItem.id];
+                                return person.Name + " - " + person.Nationality;
+                            },
+                            label: function (tooltipItems, data) {
+                                var output = "";
+
+                                var index = tooltipItems.index;
+                                var datasetIndex = tooltipItems.datasetIndex;
+                                var dataset = data.datasets[datasetIndex];
+                                var datasetItem = dataset.data[index];
+
+                                var person = response.data[datasetItem.id];
+
+                                output += "TIme: " + person.Time + "\n | \n";
+                                output += "Place: " + person.Place + "\n | \n";
+                                output += "Year: " + person.Year + "\n | \n";
+                                if (person.Doping === "") {
+                                    output += "Doping: None";
+                                } else {
+                                    output += "Doping: " + person.Doping;
+                                }
+                                return output;
+                            }
+                        }
+                    }
+                }
+            })
+
+        </script>
+    {% endautoescape %}
+
+
+    <!-- Pie Chart !-->
+
+    <script>
+
+            /*-------------- 4 Pie chart highcharts start ------------*/
+        if ($('#highpiechart4').length) {
+            var pieColors = (function () {
+                var colors = [],
+                    base = Highcharts.getOptions().colors[0],
+                    i;
+
+                for (i = 0; i < 10; i += 1) {
+                    // Start out with a darkened base color (negative brighten), and end
+                    // up with a much brighter color
+                    colors.push(Highcharts.Color(base).brighten((i - 3) / 7).get());
+                }
+                return colors;
+            }());
+
+            // Build the chart
+            Highcharts.chart('highpiechart4', {
+                chart: {
+                    plotBackgroundColor: null,
+                    plotBorderWidth: null,
+                    plotShadow: false,
+                    type: 'pie'
+                },
+
+                title: {
+                    text: '<h3>Number of Listing by Room Type</h3>'
+                },
+                tooltip: {
+                    pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                },
+                legend:
+                    {
+                        labels:
+                            {
+                                generateLabels: function (chart) {
+                                    // Here
+                                }
+                            }
+                    },
+
+                plotOptions: {
+                    pie: {
+                        allowPointSelect: true,
+                        cursor: 'pointer',
+                        colors: pieColors,
+                        dataLabels: {
+                            style: {
+                                "color": "contrast", "fontSize": "11px", "fontWeight": "bold", "textOutline": "",
+                                "margin": "8px"
+                            },
+                            enabled: true,
+                            format: '<b>{point.name}</b><br>{point.percentage:.1f} %',
+                            distance: -80,
+                            filter: {
+                                property: 'percentage',
+                                operator: '>',
+                                value: 4
+                            }
+                        }
+                    }
+                },
+                series: [{
+                    name: 'Share',
+                    data: [
+                        {#{ name: 'USD', y: 61.41 },#}
+                        {#{ name: 'BTC', y: 11.84 },#}
+                        {#{ name: 'TCN', y: 10.85 },#}
+                        {% for row in piechart %}
+                            {name: '{{ row.roomtype }}', y: {{ row.percentg }}},
+                        {% endfor %}
+
+                    ]
+                }]
+            });
+        }
+        /*-------------- 4 Pie chart highcharts end ------------*/
 
     </script>
 
-
-
-
+    <!-- Bar Chart 1 !-->
     <script>
 
         $(document).ready(function () {
@@ -928,7 +559,7 @@ if ($('#highpiechart4').length) {
                 labels: [
 
                     {% for row in barchart_ascending %}
-                    "{{ row.neighbourhood }}",
+                        "{{ row.neighbourhood }}",
                     {% endfor %},
                 ],
                 datasets: [{
@@ -937,7 +568,7 @@ if ($('#highpiechart4').length) {
 
                         {{ row.total }},
 
-                        {% endfor %}]
+                    {% endfor %}]
                 }]
 
             };
@@ -952,13 +583,16 @@ if ($('#highpiechart4').length) {
                             barThickness: 30,
                             ticks: {
                                 beginAtZero: true,
-                                mirror: true,
+                                mirror: false,
                             },
                         }],
                     },
                     responsive: true,
                     legend: {
                         display: false,
+                        labels: {
+                            fontSize: 0
+                        }
                     },
                     title: {
                         display: true,
@@ -972,16 +606,16 @@ if ($('#highpiechart4').length) {
                             const dataset = this.data.datasets[0];
                             const meta = chartInstance.controller.getDatasetMeta(0);
 
-                            Chart.helpers.each(meta.data.forEach((bar, index) => {
-                                const label = this.data.labels[index];
-                                const labelPositionX = 10;
-                                const labelWidth = ctx.measureText(label).width + labelPositionX;
-
-                                ctx.textBaseline = 'middle';
-                                ctx.textAlign = 'left';
-                                ctx.fillStyle = '#333';
-                                ctx.fillText(label, labelPositionX, bar._model.y);
-                            }));
+                            {#Chart.helpers.each(meta.data.forEach((bar, index) => {#}
+                            {#    const label = this.data.labels[index];#}
+                            {#    const labelPositionX = 100;#}
+                            {#    const labelWidth = ctx.measureText(label).width + labelPositionX;#}
+                            {##}
+                            {#    ctx.textBaseline = 'middle';#}
+                            {#    ctx.textAlign = 'left';#}
+                            {#    ctx.fillStyle = '#333';#}
+                            {#    ctx.fillText(label, labelPositionX, bar._model.y);#}
+                            {#}));#}
                         }
                     }
                 }
@@ -990,24 +624,21 @@ if ($('#highpiechart4').length) {
 
     </script>
 
-
-     <script>
+    <!-- Bar Chart 2 !-->
+    <script>
 
         $(document).ready(function () {
             var horizontalBarChartData = {
                 labels: [
-
                     {% for row in barchart_descending %}
-                    "{{ row.neighbourhood }}",
+                        "{{ row.neighbourhood }}",
                     {% endfor %},
                 ],
                 datasets: [{
                     backgroundColor: "#00b0f0",
                     data: [{% for row in barchart_descending %}
-
                         {{ row.total }},
-
-                        {% endfor %}]
+                    {% endfor %}]
                 }]
 
             };
@@ -1016,13 +647,12 @@ if ($('#highpiechart4').length) {
                 type: 'horizontalBar',
                 data: horizontalBarChartData,
                 options: {
-
                     scales: {
                         yAxes: [{
                             barThickness: 30,
                             ticks: {
                                 beginAtZero: true,
-                                mirror: true,
+                                mirror: false,
                             },
                         }],
                     },
@@ -1042,16 +672,16 @@ if ($('#highpiechart4').length) {
                             const dataset = this.data.datasets[0];
                             const meta = chartInstance.controller.getDatasetMeta(0);
 
-                            Chart.helpers.each(meta.data.forEach((bar, index) => {
-                                const label = this.data.labels[index];
-                                const labelPositionX = 10;
-                                const labelWidth = ctx.measureText(label).width + labelPositionX;
-
-                                ctx.textBaseline = 'middle';
-                                ctx.textAlign = 'left';
-                                ctx.fillStyle = '#333';
-                                ctx.fillText(label, labelPositionX, bar._model.y);
-                            }));
+                            {#Chart.helpers.each(meta.data.forEach((bar, index) => {#}
+                            {#    const label = this.data.labels[index];#}
+                            {#    const labelPositionX = 60;#}
+                            {#    const labelWidth = ctx.measureText(label).width + labelPositionX;#}
+                            {##}
+                            {#    ctx.textBaseline = 'middle';#}
+                            {#    ctx.textAlign = 'left';#}
+                            {#    ctx.fillStyle = '0';#}
+                            {#    ctx.fillText(label, labelPositionX, bar._model.y);#}
+                            {#}));#}
                         }
                     }
                 }

@@ -1,0 +1,400 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Big data analytics group</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="Free-Template.co" />
+
+    <!--
+    //////////////////////////////////////////////////////
+
+    FREE TEMPLATE
+    DESIGNED & DEVELOPED by free-template.co
+
+    Website:    https://free-template.co
+    Facebook:   https://www.facebook.com/FreeDashTemplate.co
+    Twitter:    https://twitter.com/Free_Templateco
+
+    //////////////////////////////////////////////////////
+    -->
+
+    <link rel="stylesheet" href="{% static 'assets_new/fonts.css' %}">
+    <link rel="stylesheet" href="{% static 'assets_new/fonts/icomoon/style.css' %}">
+
+    <link rel="stylesheet" href="{% static 'assets_new/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets_new/css/magnific-popup.css' %}">
+    <link rel="stylesheet" href="{% static 'assets_new/css/jquery-ui.css' %}">
+    <link rel="stylesheet" href="{% static 'assets_new/css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets_new/css/owl.theme.default.min.css' %}">
+
+    <link rel="stylesheet" href="{% static 'assets_new/css/bootstrap-datepicker.css' %}">
+
+    <link rel="stylesheet" href="{% static 'assets_new/fonts/flaticon/font/flaticon.css' %}">
+
+
+
+    <link rel="stylesheet" href="{% static 'assets_new/css/aos.css' %}">
+
+    <link rel="stylesheet" href="{% static 'assets_new/css/style.css' %}">
+
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="200">
+
+  <!-- <div class="site-wrap"> -->
+
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+
+    <header class="site-navbar py-3 js-site-navbar site-navbar-target" role="banner" id="site-navbar">
+
+      <div class="container">
+        <div class="row align-items-center">
+
+          <div class="col-11 col-xl-2 site-logo">
+            <h1 class="mb-0" data-aos="fade-up" data-aos-delay="500"><a href="aboutus.html" class="text-white h1 mb-0">GCBD</a></h1>
+          </div>
+          <div class="col-12 col-md-10 d-none d-xl-block">
+            <nav class="site-navigation position-relative text-right" role="navigation">
+
+              <ul class="site-menu js-clone-nav mx-auto d-none d-lg-block">
+                <li><a href="{% url 'app:dashboard-home' %}" class="nav-link">Home</a></li>
+                <li class="has-children">
+                  <a href="#section-about" class="nav-link">About Us</a>
+                  <ul class="dropdown">
+                    <li><a href="#section-about" class="nav-link">About us</a></li>
+                    <li><a href="#section-our-team" class="nav-link">Our Team</a></li>
+                  </ul>
+                </li>
+                <li><a href="#section-services" class="nav-link">Services</a></li>
+                <li><a href="#section-contact" class="nav-link">Contact</a></li>
+              </ul>
+            </nav>
+          </div>
+
+          <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle"><span class="icon-menu h3"></span></a></div>
+
+          </div>
+
+        </div>
+
+    </header>
+
+
+
+    <div class="site-blocks-cover overlay" style="background-image: url({% static 'assets_new/images/background.jpg' %});" data-aos="fade" data-stellar-background-ratio="0.5" id="section-home">
+      <div class="container">
+        <div class="row align-items-center justify-content-center text-center">
+
+          <div class="col-md-8" data-aos="fade-up" data-aos-delay="400">
+
+
+            <h1 class="text-white font-weight-light text-uppercase font-weight-bold" data-aos="fade-up">Take Your Business to the Next Level</h1>
+            <p class="mb-5" data-aos="fade-up" data-aos-delay="100">Georgian College Big Data Analytics Group</p>
+            <p data-aos="fade-up" data-aos-delay="200"><a href="#section-about" class="btn btn-primary py-3 px-5 text-white">LEARN MORE</a></p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <!about us>
+    <div class="site-section" id="section-about">
+      <div class="container">
+        <div class="row mb-5">
+
+          <div class="col-md-5 ml-auto mb-5 order-md-2" data-aos="fade-up" data-aos-delay="100">
+            <img src="{% static 'assets_new/images/profile.jpg' %}" alt="Image" class="img-fluid rounded">
+          </div>
+          <div class="col-md-6 order-md-1" data-aos="fade-up">
+            <div class="text-left pb-1 border-primary mb-4">
+              <h2 class="text-primary">About Us</h2>
+            </div>
+            <p>We are a consulting and technology services provider at the cutting-edge of technology with more than 10 years of experience in offering big data analytic solutions and data science to various companies throughout Canada across several industries in tourism, hospitality, retail, financial services, software, and more. We gather, analyze, transform, and accelerate data into insightful knowledge enabling enterprises to do business better.</p>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+  <!service>
+          <div class="site-section bg-image overlay" style="background-image: url({% static 'assets_new/images/work2.jpg' %});" id="section-services">
+            <div class="container">
+          <div class="row justify-content-center mb-5" data-aos="fade-up">
+          <div class="col-md-7 text-center border-primary">
+            <h2 class="mb-0 text-primary">Our Services</h2>
+            <p class="text-white">We provide excellent client service.</p>
+          </div>
+        </div>
+
+        <div class="row align-items-stretch">
+          <div class="col-md-6 col-lg-4 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="300">
+            <div class="how-it-work-item">
+              <div class="unit-4-icon mr-4"><span class="number">1</span></div>
+              <div class="text-white">
+              <h3>Extract the Data</h3>
+                <p>We extract the complete information on client's business since its establishment until now.</p>
+              </div>
+            </div>
+          </div>
+
+            <div class="col-md-6 col-lg-4 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="300">
+            <div class="how-it-work-item">
+              <div class="unit-4-icon mr-4"><span class="number">2</span></div>
+              <div class="text-white">
+                <h3>Address problems</h3>
+                <p>We address the problems by analyzing data and providing meaningful business insights for Airbnb using various key measures.
+</p>
+           <br>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="300">
+            <div class="how-it-work-item">
+              <div class="unit-4-icon mr-4"><span class="number">3</span></div>
+              <div class="text-white">
+                <h3>Visualize</h3>
+                <p>We visualize the data figures and provide a conclusive result from raw data to boost customer satisfaction.</p>
+              </div>
+            </div>
+          </div>
+
+
+         <div class="col-md-6 col-lg-4 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="300">
+            <div class="how-it-work-item">
+              <div class="unit-4-icon mr-4"><span class="number">4</span></div>
+              <div class="text-white">
+                <h3>Build an Web Application</h3>
+                <p>We build an automatic web application.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="300">
+            <div class="how-it-work-item">
+              <div class="unit-4-icon mr-4"><span class="number">5</span></div>
+              <div class="text-white">
+                <h3>Suggestions</h3>
+                <p>We recommend suggestions based on the analysis result.</p>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+
+
+
+
+ <!our team>
+    <div class="site-section border-bottom" id="section-our-team">
+      <div class="container">
+        <div class="row justify-content-center mb-5">
+          <div class="col-md-7 text-center border-primary">
+            <h2 class="font-weight-light text-primary" data-aos="fade">Our Team</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 col-lg-4 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="100">
+            <div class="person">
+              <img src="{% static 'assets_new/images/tram.jpg' %}" alt="Image" class="img-fluid rounded mb-3 w-50 rounded-circle">
+              <h3>TRAM MAI</h3>
+              <p class="position text-muted">Project Manager</p>
+              <p class="mb-4">A relationship builder, proactive learner and results-driven professional who brings 10+ years of experience in delivering information technology and supply chain management projects.</p>
+              <ul class="ul-social-circle">
+                <li><a href="#"><span class="icon-facebook"></span></a></li>
+                <li><a href="#"><span class="icon-twitter"></span></a></li>
+                <li><a href="#"><span class="icon-linkedin"></span></a></li>
+                <li><a href="#"><span class="icon-instagram"></span></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="200">
+            <div class="person">
+              <img src="{% static 'assets_new/images/lait.jpg' %}" alt="Image" class="img-fluid rounded mb-3 w-50 rounded-circle">
+              <h3>LAITWAY</h3>
+              <p class="position text-muted">Data Analyst</p>
+              <p class="mb-4">Lait has 8 years experience in investment banking in and around Africa and with a high level of analytical and data governance management.</p>
+              <ul class="ul-social-circle">
+                <li><a href="#"><span class="icon-facebook"></span></a></li>
+                <li><a href="#"><span class="icon-twitter"></span></a></li>
+                <li><a href="#"><span class="icon-linkedin"></span></a></li>
+                <li><a href="#"><span class="icon-instagram"></span></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="300">
+            <div class="person">
+              <img src="{% static 'assets_new/images/erica.jpg' %}" alt="Image" class="img-fluid rounded mb-3 w-50 rounded-circle">
+              <h3>YEONHWA</h3>
+              <p class="position text-muted">Business Analyst</p>
+              <p class="mb-4">Erica has 6 years of work experience in sales and marketing department which is architect program company, security company, and chemical companies.</p>
+              <ul class="ul-social-circle">
+                <li><a href="#"><span class="icon-facebook"></span></a></li>
+                <li><a href="#"><span class="icon-twitter"></span></a></li>
+                <li><a href="#"><span class="icon-linkedin"></span></a></li>
+                <li><a href="#"><span class="icon-instagram"></span></a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="100">
+            <div class="person">
+              <img src="{% static 'assets_new/images/doru.jpg' %}" vspace="45" alt="Image" class="img-fluid rounded mb-3 w-50 rounded-circle">
+              <h3>DORUKHAN</h3>
+              <p class="position text-muted">Business Analyst</p>
+              <p class="mb-4">Dorukhan has 10 years experience in car industry; service advisor at Audi, area sales manager at Kia, product supervisor at Kia and project management foundations in the MSc in international management.<ul class="ul-social-circle">
+                <li><a href="#"><span class="icon-facebook"></span></a></li>
+                <li><a href="#"><span class="icon-twitter"></span></a></li>
+                <li><a href="#"><span class="icon-linkedin"></span></a></li>
+                <li><a href="#"><span class="icon-instagram"></span></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="200">
+            <div class="person">
+              <img src="{% static 'assets_new/images/sasin.jpg' %}" vspace="45" alt="Image" class="img-fluid rounded mb-3 w-50 rounded-circle">
+              <h3>SASIN</h3>
+              <p class="position text-muted">Back-end Developer</p>
+              <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi at consequatur unde molestiae quidem provident voluptatum deleniti quo iste error eos est praesentium distinctio cupiditate tempore suscipit inventore deserunt tenetur.</p>
+              <ul class="ul-social-circle">
+                <li><a href="#"><span class="icon-facebook"></span></a></li>
+                <li><a href="#"><span class="icon-twitter"></span></a></li>
+                <li><a href="#"><span class="icon-linkedin"></span></a></li>
+                <li><a href="#"><span class="icon-instagram"></span></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="300">
+            <div class="person">
+              <img src="{% static 'assets_new/images/diya.jpg' %}" vspace="45" alt="Image" class="img-fluid rounded mb-3 w-50 rounded-circle">
+              <h3>DIYA</h3>
+              <p class="position text-muted">Front-end Developer</p>
+              <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi at consequatur unde molestiae quidem provident voluptatum deleniti quo iste error eos est praesentium distinctio cupiditate tempore suscipit inventore deserunt tenetur.</p>
+              <ul class="ul-social-circle">
+                <li><a href="#"><span class="icon-facebook"></span></a></li>
+                <li><a href="#"><span class="icon-twitter"></span></a></li>
+                <li><a href="#"><span class="icon-linkedin"></span></a></li>
+                <li><a href="#"><span class="icon-instagram"></span></a></li>
+              </ul>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+
+
+  <!contact>
+    <div class="site-section bg-light" id="section-contact">
+      <div class="container">
+        <div class="row justify-content-center mb-5">
+          <div class="col-md-7 text-center border-primary">
+            <h2 class="font-weight-light text-primary">Contact Us</h2>
+            <p class="color-black-opacity-5">Our consulting services enable companies and businesses of all sizes to identify how you can leverage an array of solutions to optimize and expand your company's capability and align with your industry’s compliance standards</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-7 mb-5">
+
+
+
+            <form action="#" class="p-5 bg-white">
+
+
+              <div class="row form-group">
+                <div class="col-md-6 mb-3 mb-md-0">
+                  <label class="text-black" for="fname">First Name</label>
+                  <input type="text" id="fname" class="form-control">
+                </div>
+                <div class="col-md-6">
+                  <label class="text-black" for="lname">Last Name</label>
+                  <input type="text" id="lname" class="form-control">
+                </div>
+              </div>
+
+              <div class="row form-group">
+
+                <div class="col-md-12">
+                  <label class="text-black" for="email">Email</label>
+                  <input type="email" id="email" class="form-control">
+                </div>
+              </div>
+
+              <div class="row form-group">
+
+                <div class="col-md-12">
+                  <label class="text-black" for="subject">Subject</label>
+                  <input class="form-control" id="subject" type="subject">
+                </div>
+              </div>
+
+              <div class="row form-group">
+                <div class="col-md-12">
+                  <label class="text-black" for="message">Message</label>
+                  <textarea name="message" id="message" cols="30" rows="7" class="form-control"></textarea>
+                </div>
+              </div>
+
+              <div class="row form-group">
+                <div class="col-md-12">
+                  <input type="submit" value="Send Message" class="btn btn-primary py-2 px-4 text-white">
+                </div>
+              </div>
+
+
+            </form>
+          </div>
+          <div class="col-md-5">
+
+            <div class="p-4 mb-3 bg-white">
+              <p class="mb-0 font-weight-bold">Address</p>
+              <p class="mb-4">One Georgian Dr., Barrie ON CANADA L4M 3X9</p>
+
+              <p class="mb-0 font-weight-bold">Phone</p>
+              <p class="mb-4"><a href="#">+1)705.728.1968</a></p>
+
+              <p class="mb-0 font-weight-bold">Email Address</p>
+              <p class="mb-0"><a href="#">dataprogramming@mygeorgian.com</a></p>
+
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+  <!-- </div> -->
+
+  <script src="{% static 'assets_new/js/jquery-3.3.1.min.js' %}"></script>
+  <script src="{% static 'assets_new/js/jquery-migrate-3.0.1.min.js' %}"></script>
+  <script src="{% static 'assets_new/js/jquery-ui.js' %}"></script>
+  <script src="{% static 'assets_new/js/jquery.easing.1.3.js' %}"></script>
+  <script src="{% static 'assets_new/js/popper.min.js' %}"></script>
+  <script src="{% static 'assets_new/js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'assets_new/js/owl.carousel.min.js' %}"></script>
+  <script src="{% static 'assets_new/js/jquery.stellar.min.js' %}"></script>
+  <script src="{% static 'assets_new/js/jquery.countdown.min.js' %}"></script>
+  <script src="{% static 'assets_new/js/jquery.magnific-popup.min.js' %}"></script>
+  <script src="{% static 'assets_new/js/bootstrap-datepicker.min.js' %}"></script>
+  <script src="{% static 'assets_new/js/aos.js' %}"></script>
+
+  <script src="{% static 'assets_new/js/main.js' %}"></script>
+
+  </body>
+</html>

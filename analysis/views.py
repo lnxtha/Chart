@@ -129,9 +129,9 @@ class ForgotPassword(View):
 
 
 
-class About(View):
+class AboutUs(View):
     def get(self, request):
-        template_name = 'about.html'
+        template_name = 'aboutus.html'
         return render(request, template_name, {'':''})
 
 

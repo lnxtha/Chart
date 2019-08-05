@@ -44,7 +44,7 @@ class CustomerSatisfaction(View):
         template_name = 'customer_satisfaction.html'
 
         return render(request, template_name,{
-                                              'trendline': Reviews.objects.raw('SELECT 1 as id, datepart(year,cast(d.date as date)) as dates, count(d.date) as datecount FROM analysis_reviews d group by datepart(year,cast(d.date as date))'),
+                                              'trendline': Reviews.objects.raw('SELECT 1 as id, datepart(year,cast(d.date as date)) as year, count(d.date) as datecount FROM analysis_reviews d group by datepart(year,cast(d.date as date))'),
                                               'barchart': Listings.objects.raw('select 1 as id, room_type as roomtype,count(review_scores_rating) as scorecount from analysis_listings group by room_type')
                                               })
 

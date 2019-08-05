@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.views import View
 from django.http import JsonResponse
-from .models import Listings
+from .models import Listings, Reviews
 
 
 # Create your views here.
@@ -42,8 +42,11 @@ class PricingStrategy(View):
 class CustomerSatisfaction(View):
     def get(self,request):
         template_name = 'customer_satisfaction.html'
-        return render(request, template_name,{'listofobjects':
-                                              Listings.objects.all()[:1000]})
+
+        return render(request, template_name,{
+                                              'trendline': Reviews.objects.raw('SELECT 1 as id, datepart(year,cast(d.date as date)) as dates, count(d.date) as datecount FROM analysis_reviews d group by datepart(year,cast(d.date as date))'),
+                                              'barchart': Listings.objects.raw('select 1 as id, room_type as roomtype,count(review_scores_rating) as scorecount from analysis_listings group by room_type')
+                                              })
 
 
 class BarChart(View):
@@ -132,33 +135,33 @@ class AboutUs(View):
 
 
 
-def CustomerSatisfaction_Json(request, *args, **kwargs):
-    z = Listings.objects.all()
-    longitude = []
-    latitude = []
-    room_type = []
-    neighbourhood = []
-    arr_string = []
-    for i in z[:20]:
-        longitude.append(i.longitude)
-        latitude.append(i.latitude)
-        room_type.append(i.room_type)
-        neighbourhood.append(i.neighbourhood)
-
-    for s in Listings.objects.all():
-        arr_string.append( {
-            "zoomLevel": 5,
-            "scale": 0.5,
-            "title": str(s.neighbourhood),
-            "latitude": str(s.latitude),
-            "longitude": str(s.longitude)
-        })
-
-    print(arr_string)
-    return JsonResponse(
-        {
-            'context': arr_string
-        })
+# def CustomerSatisfaction_Json(request, *args, **kwargs):
+#     z = Listings.objects.all()
+#     longitude = []
+#     latitude = []
+#     room_type = []
+#     neighbourhood = []
+#     arr_string = []
+#     for i in z[:20]:
+#         longitude.append(i.longitude)
+#         latitude.append(i.latitude)
+#         room_type.append(i.room_type)
+#         neighbourhood.append(i.neighbourhood)
+#
+#     for s in Listings.objects.all():
+#         arr_string.append( {
+#             "zoomLevel": 5,
+#             "scale": 0.5,
+#             "title": str(s.neighbourhood),
+#             "latitude": str(s.latitude),
+#             "longitude": str(s.longitude)
+#         })
+#
+#     print(arr_string)
+#     return JsonResponse(
+#         {
+#             'context': arr_string
+#         })
 
 
 

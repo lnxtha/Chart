@@ -3,11 +3,6 @@ from django.views import View
 from django.http import JsonResponse
 from .models import Listings
 
-from django.db.models import Count
-
-import csv
-import os
-import re
 
 # Create your views here.
 class DashboardHome(View):

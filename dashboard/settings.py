@@ -84,13 +84,28 @@ WSGI_APPLICATION = 'dashboard.wsgi.application'
 # }
 
 
+# DATABASES = {
+# 'default': {
+#     'ENGINE': 'sql_server.pyodbc',
+#         'NAME': 'DataVisualization',
+#         'USER': 'diya@datavisualization',
+#         'PASSWORD': 'shrestha123@',
+#         'HOST': 'datavisualization.database.windows.net',
+#     'PORT': '',
+#     'OPTIONS': {
+#         'driver': 'ODBC Driver 17 for SQL Server',
+#     },
+# }
+# }
+
+
 DATABASES = {
 'default': {
     'ENGINE': 'sql_server.pyodbc',
-        'NAME': 'DataVisualization',
-        'USER': 'diya@datavisualization',
+        'NAME': 'db_airbnbanalytics',
+        'USER': 'diya@airbnb',
         'PASSWORD': 'shrestha123@',
-        'HOST': 'datavisualization.database.windows.net',
+        'HOST': 'airbnb.database.windows.net',
     'PORT': '',
     'OPTIONS': {
         'driver': 'ODBC Driver 17 for SQL Server',

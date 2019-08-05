@@ -586,9 +586,8 @@
             chart.data = [
 
                 {% for i in trendline %}
-
                 {
-                "date": "{{ i.dates }}",
+                "date": "{{ i.year }}",
                 "value": {{ i.datecount }}
             },
                 {% endfor %}
@@ -646,13 +645,27 @@
             };
 
             createTrendLine([
-                {"date": "2012-01-02", "value": 10},
-                {"date": "2012-01-11", "value": 19}
+                {% for row in trendline %}
+                    {% if row.year == 2013 %}
+                {"date": "{{ row.year }}", "value": {{row.datecount}} },
+                    {% endif %}
+
+                    {% if row.year == 2017  %}
+                        {"date": "{{ row.year }}", "value": {{row.datecount}} },
+                    {% endif %}
+                {% endfor %}
             ]);
 
             var lastTrend = createTrendLine([
-                {"date": "2012-01-17", "value": 16},
-                {"date": "2012-01-22", "value": 10}
+                {% for row in trendline %}
+                    {% if row.year == 2018 %}
+                {"date": "{{ row.year }}", "value": {{row.datecount}} },
+                    {% endif %}
+
+                    {% if row.year >= 2019  %}
+                        {"date": "{{ row.year }}", "value": {{row.datecount}} },
+                    {% endif %}
+                {% endfor %}
             ]);
 
 // Initial zoom once chart is ready

@@ -1,4 +1,4 @@
-Django==2.1.10
+Django==2.2.24
 django-pyodbc-azure
 gunicorn==19.9.0
 jsonpickle==1.2
